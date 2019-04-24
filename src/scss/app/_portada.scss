@@ -1,0 +1,130 @@
+.view-portada {
+    background-image: url('../img/Fondo-textura.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: map-get($grid-breakpoints, 'sm');
+    height: 100vh;
+    #logo {
+        width: $logo-planeta;
+        height: $logo-planeta;
+        position: absolute;
+        right: $logo-planeta / 5;
+        top: $logo-planeta / 5;
+    }
+    #titulo {
+        width: 18em;
+        line-height: 1;
+        position: absolute;
+        top: 2.5em;
+        left: 2.5em;
+        #desafio {
+            font-family: $sans-serif;
+            font-size: $desafio;
+            font-weight: 800;
+            color: #0B3158;
+            border-bottom: 1px solid rgba(185,167,141,0.25);
+        }
+        #tema {
+            font-family: $serif;
+            font-size: $tema;
+            color: #89765E;
+            margin-top: 5px;
+        }
+    }
+    #botonera {
+        width: 754px;
+        height: 524px;
+        background-image: url('../img/Arco.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        a {
+            font-family: $sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            text-decoration: none !important;
+            color: #5B401F !important;
+            position: absolute;
+            width: 270px;
+            .icono img {
+                width: 140px;
+                height: auto;
+            }
+            .texto {
+                position: absolute;
+                top: 115px;
+            }
+        }
+        #btn01 {
+            bottom: 98px;
+            left: 48px;
+            .texto {
+                left: 90px;
+            }
+        }
+        #btn02 {
+            bottom: 176px;
+            left: 118px;
+            .texto {
+                left: 83px;
+            }
+        } 
+        #btn03 {
+            bottom: 247px;
+            left: 184px;
+            .texto {
+                left: 77px;
+            }
+        }
+        #btn04 {
+            bottom: 308px;
+            left: 261px;
+            .texto {
+                left: 59px;
+            }
+        }
+        #btn05 {
+            bottom: 360px;
+            left: 347px;
+            .texto {
+                left: 44px;
+            }
+        }
+        #btn06 {
+            bottom: 410px;
+            left: 448px;
+            .texto {
+                left: 31px;
+            }
+        }
+        #btn07 {
+            bottom: 438px;
+            left: 555px;
+            .texto {
+                left: 18px;
+            }
+        }
+        #btn08 {
+            bottom: 448px;
+            left: 666px;
+            .texto {
+                left: 55px;
+            }
+        }
+    }
+    #figura {
+        position: absolute;
+        width: 353px;
+        height: 302px;
+        right: 0;
+        bottom: 0;
+        img {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}

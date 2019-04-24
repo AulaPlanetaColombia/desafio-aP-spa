@@ -1,0 +1,320 @@
+.pagina {
+    .navegacion {
+        .titulo {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            .icono {
+                width: $icono-navbar;
+                height: $icono-navbar;
+                position: absolute;
+                left: -5rem;
+                top: 0.5rem;
+            }
+            .texto {
+                font-size: $titulo-size;
+                text-align: center;
+                color: $titulo-nav;
+                font-weight: 800;
+            }
+        }
+        #navbarNav {
+            flex-grow: 0;
+            .logo {
+                width: $logo-planeta;
+                height: $logo-planeta;
+                background-image: url('../img/logo-blanco.svg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin-left: 1rem;
+            }
+        }
+    }
+    .contenido {
+        display: flex;
+        justify-content: center;
+        padding-top: 5rem;
+        @media screen and (max-width: 420px) {
+            padding-top: 7rem;
+        }
+        .seccion {
+            width: 100%;
+            font-family: $sans-serif;
+            .titulo {
+                text-align: center
+            }
+        }
+    }
+}
+.view-pag01 {
+    .navegacion {
+        background-color: $pag01-soft;
+    }
+    .contenido {
+        .seccion {
+            .preg-detona {
+                display: flex;
+                justify-content: center;
+                .fondo {
+                    height: 110vh;
+                    width: 110vh;
+                    border-radius: 55vh;
+                    margin-top: -5rem;
+                    @media screen and (max-width: 420px) {
+                        margin-top: -7rem;
+                    }
+                    @media screen and (max-height: 560px) {
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 0;
+                        margin: 0;
+                    }
+                    background-color: $pag01-hard;
+                    display: flex;
+                    align-items: center;
+                    .texto {
+                        color: $blanco;
+                        font-family: $sans-serif;
+                        font-size: 5rem;
+                        font-weight: 800;
+                        text-align: center;
+                        @media screen and (max-width: 420px) {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.view-pag02 {
+    .navegacion {
+        background-color: $pag02-soft;
+    }
+    .contenido {
+        height: 100vh;
+        align-items: center;
+        .seccion {
+            .card {
+                .card-body {
+                    justify-content: center;
+                    display: flex;
+                    flex-direction: column;
+                    p {
+                        font-size: 2rem;
+                        color: $texto-resaltado;
+                    }
+                    h5 {
+                        font-size: 2.5rem;
+                        color: $pag02-hard;
+                        font-weight: 800;
+                    }
+                    figure {
+                        width: 50%;
+                        align-self: center;
+                    }
+                }
+            }
+        }
+    }
+}
+.view-pag03 {
+    .navegacion {
+        background-color: $pag03-soft;
+    }
+    .contenido {
+        height: 100vh;
+        overflow-y: hidden;
+        .seccion {
+            .hilo {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                background-image: url('../img/fondohilo.png');
+                background-size: cover;
+                position: relative;
+                margin-top: -10%;
+                .aspectos {
+                    background-color: $blanco;
+                    position: relative;
+                    border-radius: 50%;
+                    width: 80%;
+                    &:after {
+                        content: "";
+                        display: block;
+                        padding-bottom: 100%;
+                    }
+                    .aspecto {
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        z-index: 13;
+                        font-family: 'OpenSans', 'Arial', 'Helvetica', sans-serif;
+                        font-weight: 800;
+                        img {
+                            width: 80px;
+                            height: 80px;
+                        }
+                        span {
+                            width: 10em;
+                            text-align: center;
+                        }
+                        &.asp1 {
+                            left: 0;
+                            top: 45%;
+                        }
+                        &.asp2 {
+                            left: 35%;
+                            top: 37%;
+                        }
+                        &.asp3 {
+                            left: 15%;
+                            top: 70%;
+                        }
+                        &.asp4 {
+                            left: 24%;
+                            top: 49%;
+                        }
+                        &.asp5 {
+                            left: 56%;
+                            top: 49%;
+                        }
+                        &.asp6 {
+                            left: 42%;
+                            top: 70%;
+                        }
+                    }
+                    .imagen-fondo {
+                        position: absolute;
+                        width: 140%;
+                        top: -20%;
+                        left: -20%;
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+                h5 {
+                    font-size: 1.5rem;
+                    color: $pag03-hard;
+                    position: absolute;
+                    width: 26em;
+                    top: 14%;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+.view-pag04 {
+    .navegacion {
+        background-color: $pag04-soft;
+    }
+    .contenido {
+        height: 100vh;
+        padding: 0;
+        .seccion {
+            font-size: 1.35em;
+            .resaltado,
+            .resaltado-inv {
+                font-size: 1.5em;
+                font-weight: 800;
+            }
+            .resaltado {
+                color: $pag04-hard;
+            }
+            .resaltado-inv {
+                color: $blanco;
+            }
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .card {
+                border: 0;
+                background: transparent;
+            }
+            &.sec01 {
+                background-image: url('../img/fondocamino01.svg');
+                .resaltado {
+                    margin-bottom: 4rem;
+                    max-width: 21em;
+                }
+            }
+            &.sec02 {
+                background-image: url('../img/fondocamino02.svg');
+                .card {
+                    height: 100%;
+                    .card-body {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        display: flex;
+                        align-items: stretch;
+                        .resaltado-inv {
+                            max-width: 8em;
+                            align-items: center;
+                            display: flex;
+                            margin-left: 3rem;
+                        }
+                        .pasos {
+                            width: 55%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-evenly;
+                            padding: 2em 0;
+                            .paso {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: flex-start;
+                                align-items: center;
+                                .numero {
+                                    font-size: 2em;
+                                    width: 2em;
+                                    height: 2em;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background-color: $pag04-espe;
+                                    color: $blanco;
+                                    font-weight: 800;
+                                    position: relative;
+                                }
+
+                                &:nth-of-type(1),
+                                &:nth-of-type(2),
+                                &:nth-of-type(3),
+                                &:nth-of-type(4) {
+                                    .numero:before {
+                                        content: '';
+                                        position: absolute;
+                                        width: 0.2em;
+                                        height: 3em;
+                                        background-color: $pag04-light;
+                                        left: 0.9em;
+                                        top: 1.5em;
+                                        z-index: -3;
+                                    }
+                                }
+                                .descripcion {
+                                    color: $titulo-nav;
+                                    line-height: 0.6;
+                                    margin-left: 2.5rem;
+                                    margin-top: 0.75em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.sec03 {
+                /*background-image: url('../img/fondocamino03.svg');*/
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+    }
+}

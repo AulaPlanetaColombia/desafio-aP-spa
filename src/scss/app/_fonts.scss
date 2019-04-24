@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/opensans-bold-webfont.woff2') format('woff2'),
+        url('../fonts/opensans-bold-webfont.woff') format('woff'),
+        url('../fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/opensans-italic-webfont.woff2') format('woff2'),
+        url('../fonts/opensans-italic-webfont.woff') format('woff'),
+        url('../fonts/OpenSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/opensans-light-webfont.woff2') format('woff2'),
+        url('../fonts/opensans-light-webfont.woff') format('woff'),
+        url('../fonts/OpenSans-Light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+        url('../fonts/opensans-regular-webfont.woff') format('woff'),
+        url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PT_Serif';
+    src: url('../fonts/pt_serif-web-bold-webfont.woff2') format('woff2'),
+        url('../fonts/pt_serif-web-bold-webfont.woff') format('woff'),
+        url('../fonts/PT_Serif-Web-Bold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PT_Serif';
+    src: url('../fonts/pt_serif-web-italic-webfont.woff2') format('woff2'),
+        url('../fonts/pt_serif-web-italic-webfont.woff') format('woff'),
+        url('../fonts/PT_Serif-Web-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'PT_Serif';
+    src: url('../fonts/pt_serif-web-regular-webfont.woff2') format('woff2'),
+        url('../fonts/pt_serif-web-regular-webfont.woff') format('woff'),
+        url('../fonts/PT_Serif-Web-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
