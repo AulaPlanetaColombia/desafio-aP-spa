@@ -1,130 +1,124 @@
 .view-portada {
-    background-image: url('../img/Fondo-textura.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    min-height: map-get($grid-breakpoints, 'sm');
-    height: 100vh;
-    #logo {
-        width: $logo-planeta;
-        height: $logo-planeta;
-        position: absolute;
-        right: $logo-planeta / 5;
-        top: $logo-planeta / 5;
-    }
+    background-image: url('../img/portada.jpg');
     #titulo {
-        width: 18em;
-        line-height: 1;
+        width: 390px;
         position: absolute;
-        top: 2.5em;
-        left: 2.5em;
+        top: 55px;
+        left: 54px;
         #desafio {
-            font-family: $sans-serif;
-            font-size: $desafio;
+            font-family: $arial;
+            font-size: $desafio-size;
             font-weight: 800;
-            color: #0B3158;
-            border-bottom: 1px solid rgba(185,167,141,0.25);
+            line-height: 1.2;
+            color: $desafio-color;
+            border-bottom: $titulo-borde;
         }
         #tema {
-            font-family: $serif;
-            font-size: $tema;
-            color: #89765E;
-            margin-top: 5px;
+            font-family: $georgia;
+            font-size: $tema-size;
+            color: $tema-color;
+            line-height: 1;
+            margin-top: 7px;
         }
     }
     #botonera {
-        width: 754px;
-        height: 524px;
-        background-image: url('../img/Arco.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
+        width: 951px;
+        height: 671px;
         position: absolute;
         bottom: 0;
         left: 0;
         a {
-            font-family: $sans-serif;
-            font-size: 16px;
-            font-weight: 800;
-            text-decoration: none !important;
-            color: #5B401F !important;
             position: absolute;
-            width: 270px;
-            .icono img {
-                width: 140px;
-                height: auto;
+            background-repeat: no-repeat;
+            width: 112px;
+            height: 112px;
+            &:hover {
+                background-image: url('../img/boton-sombra.svg');
+                .icono {
+                    top: -2px;
+                    left: -2px;
+                }
+            }
+            .icono {
+                width: 112px;
+                height: 112px;
+                position: absolute;
+                top: 0;
+                left: 0;
             }
             .texto {
                 position: absolute;
-                top: 115px;
+                font-family: $sans-serif;
+                font-size: 20px;
+                font-weight: 800;
+                text-decoration: none !important;
+                color: #5B401F !important;
+                width: 350px;
             }
         }
         #btn01 {
-            bottom: 98px;
-            left: 48px;
+            bottom: 113px;
+            left: 72px;
             .texto {
-                left: 90px;
+                left: 89px;
+                top: 97px;
             }
         }
         #btn02 {
-            bottom: 176px;
-            left: 118px;
+            bottom: 219px;
+            left: 149px;
             .texto {
-                left: 83px;
+                left: 74px;
+                top: 105px;
             }
         } 
         #btn03 {
-            bottom: 247px;
-            left: 184px;
+            bottom: 308px;
+            left: 235px;
             .texto {
-                left: 77px;
+                left: 60px;
+                top: 107px;
             }
         }
         #btn04 {
-            bottom: 308px;
-            left: 261px;
+            bottom: 390px;
+            left: 331px;
             .texto {
-                left: 59px;
+                left: 52px;
+                top: 108px;
             }
         }
         #btn05 {
-            bottom: 360px;
-            left: 347px;
+            bottom: 459px;
+            left: 445px;
             .texto {
-                left: 44px;
+                left: 31px;
+                top: 108px;
             }
         }
         #btn06 {
-            bottom: 410px;
-            left: 448px;
+            bottom: 510px;
+            left: 573px;
             .texto {
-                left: 31px;
+                left: 6px;
+                top: 106px;
             }
         }
         #btn07 {
-            bottom: 438px;
-            left: 555px;
+            bottom: 541px;
+            left: 712px;
             .texto {
-                left: 18px;
+                left: -14px;
+                top: 106px;
             }
         }
         #btn08 {
-            bottom: 448px;
-            left: 666px;
+            bottom: 559px;
+            left: 852px;
             .texto {
-                left: 55px;
+                left: 30px;
+                top: 106px;
             }
-        }
-    }
-    #figura {
-        position: absolute;
-        width: 353px;
-        height: 302px;
-        right: 0;
-        bottom: 0;
-        img {
-            position: absolute;
-            right: 0;
-            bottom: 0;
         }
     }
 }

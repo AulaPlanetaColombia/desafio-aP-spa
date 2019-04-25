@@ -1,0 +1,76 @@
+@function variables($asignatura) {
+    @if $asignatura == 'cs' {
+        $map: (
+            desafio-color: #0B3158,
+            tema-color: #89765E,
+            titulo-borde: 1px solid rgba(185,167,141,0.25),
+            blanco: #fff,
+            titulo-nav: #0b3158,
+            footer-color: #0b3158,
+            texto-resaltado: #0b3158,
+            pag01-hard: #776db0,
+            pag01-soft: #d6d3e7,
+            pag02-hard: #e54d3d,
+            pag02-soft: #eb7064,
+            pag03-hard: #33bbe7,
+            pag03-soft: #33bbe7,
+            pag04-hard: #00b212,
+            pag04-soft: #4dc959,
+            pag04-espe: #bfd966,
+            pag04-light: #e4eed0
+        );
+        @return $map;
+    }
+}
+
+// Desde Bootstrap
+
+$embed-responsive-aspect-ratios: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$embed-responsive-aspect-ratios: join(
+    (
+        (21 9),
+        (16 9),
+        (4 3),
+        (1 1),
+    ),
+    $embed-responsive-aspect-ratios
+);
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+
+    &::before {
+        display: block;
+        content: "";
+    }
+
+    .embed-responsive-item,
+    iframe,
+    embed,
+    object,
+    video {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+}
+
+@each $embed-responsive-aspect-ratio in $embed-responsive-aspect-ratios {
+    $embed-responsive-aspect-ratio-x: nth($embed-responsive-aspect-ratio, 1);
+    $embed-responsive-aspect-ratio-y: nth($embed-responsive-aspect-ratio, 2);
+
+    .embed-responsive-#{$embed-responsive-aspect-ratio-x}by#{$embed-responsive-aspect-ratio-y} {
+        &::before {
+            padding-top: percentage($embed-responsive-aspect-ratio-y / $embed-responsive-aspect-ratio-x);
+        }
+    }
+}

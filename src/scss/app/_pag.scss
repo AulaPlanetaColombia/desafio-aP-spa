@@ -1,87 +1,156 @@
 .pagina {
-    .navegacion {
+    .barra {
+        width: $ancho-total;
+        height: $barra-height;
+        position: fixed;
+        z-index: 999;
         .titulo {
-            display: flex;
             position: relative;
-            justify-content: center;
+            height: 100%;
             .icono {
-                width: $icono-navbar;
-                height: $icono-navbar;
+                width: $icono-barra;
+                height: $icono-barra;
                 position: absolute;
-                left: -5rem;
-                top: 0.5rem;
+                left: 23px;
+                top: 21px;
             }
             .texto {
-                font-size: $titulo-size;
-                text-align: center;
+                font-family: $sans-serif;
+                font-weight: bolder;
                 color: $titulo-nav;
-                font-weight: 800;
+                position: absolute;
+                top: 15px;
+                left: 101px;
+                font-size: 23px;
             }
         }
-        #navbarNav {
-            flex-grow: 0;
-            .logo {
-                width: $logo-planeta;
-                height: $logo-planeta;
-                background-image: url('../img/logo-blanco.svg');
-                background-size: cover;
-                background-repeat: no-repeat;
-                margin-left: 1rem;
-            }
+        .logo {
+            width: $logo-barra;
+            height: $logo-barra;
+            background-image: url('../img/' + $asignatura + '-logo_pag01.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 10px;
+            top: 11px;
         }
     }
     .contenido {
-        display: flex;
-        justify-content: center;
-        padding-top: 5rem;
-        @media screen and (max-width: 420px) {
-            padding-top: 7rem;
-        }
+        padding-top: $barra-height;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position-y: bottom;
         .seccion {
             width: 100%;
             font-family: $sans-serif;
-            .titulo {
-                text-align: center
+            .preg-detona {
+                width: 830px;
+                height: $alto-total - $barra-height - $footer-height;
+                overflow: hidden;
+                margin: 0 auto;
+                .fondo {
+                    height: 830px;
+                    width: 830px;
+                    border-radius: 415px;
+                    margin-top: -122px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .texto {
+                        color: $blanco;
+                        font-family: $sans-serif;
+                        font-size: $pregunta-detona-size;
+                        font-weight: 800;
+                        text-align: center;
+                        width: 620px;
+                    }
+                }
+            }
+        }
+    }
+    .pie {
+        width: $ancho-total;
+        height: $footer-height;
+        background-color: $footer-color;
+        position: fixed;
+        z-index: 998;
+        bottom: 0;
+        #titulo {
+            position: absolute;
+            text-align: right;
+            right: 108px;
+            top: 10px;
+            #desafio {
+                font-family: $sans-serif;
+                font-size: $footer-desafio-size;
+                font-weight: 800;
+                line-height: 1.2;
+                color: $blanco;
+                border-bottom: $titulo-borde;
+            }
+            #tema {
+                font-family: $serif;
+                font-size: $footer-tema-size;
+                color: $tema-color;
+                line-height: 1;
+                margin-top: 4px;
+            }
+        }
+        .figura {
+            background-image: url('../img/fondo-footer.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 95px;
+            height: 82px;
+            position: absolute;
+            right: 0;
+            top: -9px;
+        }
+        #navbar {
+            position: absolute;
+            top: 27px;
+            left: 27px;
+            a {
+                width: $navbar-boton;
+                height: $navbar-boton;
+                background-size: contain;
+                background-repeat: no-repeat;
+                display: inline-block;
+            }
+            .anterior {
+                background-image: url('../img/ant-act.svg');
+                &.disabled {
+                    background-image: url('../img/ant-des.svg');
+                }
+            }
+            .siguiente {
+                background-image: url('../img/sig-act.svg');
+                &.disabled {
+                    background-image: url('../img/sig-des.svg');
+                }
+            }
+            .volver {
+                background-image: url('../img/volver.svg');
             }
         }
     }
 }
 .view-pag01 {
-    .navegacion {
+    .barra {
         background-color: $pag01-soft;
     }
     .contenido {
-        .seccion {
+        background-image: url('../img/' + $asignatura + '-fondo_pag01_sec01.jpg');
+        .sec01 {
+            .contenedor {
+                width: 823px;
+                margin: 41px auto 0;
+            }
+        }
+        .sec02 {
             .preg-detona {
-                display: flex;
-                justify-content: center;
                 .fondo {
-                    height: 110vh;
-                    width: 110vh;
-                    border-radius: 55vh;
-                    margin-top: -5rem;
-                    @media screen and (max-width: 420px) {
-                        margin-top: -7rem;
-                    }
-                    @media screen and (max-height: 560px) {
-                        height: 100%;
-                        width: 100%;
-                        border-radius: 0;
-                        margin: 0;
-                    }
                     background-color: $pag01-hard;
-                    display: flex;
-                    align-items: center;
-                    .texto {
-                        color: $blanco;
-                        font-family: $sans-serif;
-                        font-size: 5rem;
-                        font-weight: 800;
-                        text-align: center;
-                        @media screen and (max-width: 420px) {
-                            font-size: 2rem;
-                        }
-                    }
                 }
             }
         }

@@ -1,35 +1,66 @@
+body {
+    margin: 0;
+}
 /****** Variables *******/
+
+$asignatura: 'cs';
 
 // Tipografía
 $serif: 'PT_Serif', 'Georgia', 'Times', serif;
-$sans-serif: 'OpenSans', 'Arial', 'Helvetica', sans-serif;
-$desafio: 44px;
-$tema: 36px;
+$sans-serif: 'Lato', 'Arial', 'Helvetica', sans-serif;
+$arial: 'Arial', 'Helvetica', sans-serif;
+$georgia: 'Georgia', 'Times', serif;
+$desafio-size: 54px;
+$tema-size: 45px;
 $titulo-size: 1.5rem;
+$footer-desafio-size: 25px;
+$footer-tema-size: 20px;
+$pregunta-detona-size: 72px;
+
+// Páginas de contenido
+$ancho-total: 1024px;
+$alto-total: 768px;
+$barra-height: 61px;
+$footer-height: 73px;
 
 // Imágenes y logos
-$logo-planeta: 40px;
-$icono-navbar: 4rem;
+$logo-barra: 26px;
+$icono-barra: 66px;
+$navbar-boton: 23px;
+
+// Variables por asignatura
+$variables: variables($asignatura);
+
+// Texto titulo
+$desafio-color: map-get($variables, 'desafio-color');
+$tema-color: map-get($variables, 'tema-color');
+$titulo-borde: map-get($variables, 'titulo-borde');
+
 
 // Colores
-$blanco: #fff;
-$titulo-nav: #0b3158;
-$texto-resaltado: #0b3158;
-$pag01-hard: #776db0;
-$pag01-soft: #d6d3e7;
-$pag02-hard: #e54d3d;
-$pag02-soft: #eb7064;
-$pag03-hard: #33bbe7;
-$pag03-soft: #33bbe7;
-$pag04-hard: #00b212;
-$pag04-soft: #4dc959;
-$pag04-espe: #bfd966;
-$pag04-light: #e4eed0;
+$blanco: map-get($variables, 'blanco');
+$titulo-nav: map-get($variables, 'titulo-nav');
+$footer-color: map-get($variables, 'footer-color');
+$texto-resaltado: map-get($variables, 'texto-resaltado');
+$pag01-hard: map-get($variables, 'pag01-hard');
+$pag01-soft: map-get($variables, 'pag01-soft');
+$pag02-hard: map-get($variables, 'pag02-hard');
+$pag02-soft: map-get($variables, 'pag02-soft');
+$pag03-hard: map-get($variables, 'pag03-hard');
+$pag03-soft: map-get($variables, 'pag03-soft');
+$pag04-hard: map-get($variables, 'pag04-hard');
+$pag04-soft: map-get($variables, 'pag04-soft');
+$pag04-espe: map-get($variables, 'pag04-espe');
+$pag04-light: map-get($variables, 'pag04-light');
 
 // Contenido
 #inicial {
-    height: 100vh;
-    overflow: scroll !important;
+    width: $ancho-total;
+    height: $alto-total;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    position: relative;
+    //overflow: scroll !important;
 }
 .ap {
     span:nth-of-type(1) {

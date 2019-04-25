@@ -1,61 +1,39 @@
 var idioma = 'es';
-var animGen = 'fadeInRightBig';
-var animBotones = 'bounceInRight';
+var asignatura = 'cs';
+var tema = 'La civilización romana';
+var animGen = 'fadeIn';
 var animSec = 'fadeIn';
 var numSeccion = 0;
 var dataPag = {};
-var botones = [];
-var numBoton = 0;
-var numSecTotal, secVisible, numLink, numSec, nomSec, numPag, disabled, classPag, numSec, numVista;
+var numSecTotal, secVisible, numSec, nomSec, numPag, disabled, classPag, numSec, numVista;
 $(function(){
     cargaVista('portada');
 });
 // Funciones Portada
 function iniciaPortada() {
     $('#botonera a').each(function(i,e){
-        $(e).off().hide().click(function(ev){
+        $(e).off().click(function(ev){
             ev.preventDefault();
             numVista = 'pag' + dosDigitos(i + 1);
             cargaVista(numVista);
-        }).on('mouseover', function(){
-            $(this).addClass('animated pulse').on('animationend', function(){
-                $(this).removeClass('animated pulse');
-            });
-        });
-        botones[i] = e;
+        })
     });
     $('#inicial').show().addClass('animated ' + animGen).on('animationend', function(){
         $('#inicial').off().removeClass('animated ' + animGen);
-        numBoton = 0;
-        iniciaAnimPortada();
     });
 }
-function iniciaAnimPortada() {
-    var el = botones[numBoton];
-    $(el).show();
-    $(el).addClass('animated ' + animBotones);
-    if (numBoton < botones.length) {
-        numBoton++;
-        window.setTimeout(function(){
-            iniciaAnimPortada();
-        },200);
-    }
-    $(el).on('animationend', function(){
-        $(el).removeClass('animated ' + animBotones);
-    });
-}
-// Funciones Página
 
+// Funciones Página
 function iniciaPag() {
     if ($('#inicial .contenido .seccion').length > 1) {
         ocultaSecciones();
-        generaPaginacion();
+        //generaPaginacion();
     } else {
         $('#navbarNav .pagination').html('');
     }
     $('#inicial').show().addClass('animated ' + animGen).on('animationend', function(){
         $('#inicial').removeClass('animated ' + animGen);
-        $('.volver>button').off().click(function(){
+        $('#navbar>.volver').off().click(function(){
             numSeccion = 0;
             cargaVista('portada');
         });
@@ -69,7 +47,6 @@ function cargaSeccion(num) {
 function ocultaSecciones() {
     numSecTotal = $('#inicial .contenido .seccion').length - 1;
     secVisible = dosDigitos(numSeccion + 1);
-    numLink = 'link-' + String(numSeccion + 1);
     $('#inicial .contenido .seccion').each(function(i,e){
         $.each($(e).attr('class').split(/\s+/), function(index, elemento) {
             if (elemento.substr(0,3) == 'sec' && elemento.length == 5) {
@@ -84,42 +61,29 @@ function ocultaSecciones() {
         } else {
             $(this).hide();
         }
+        cargaTitulos();
     });
-    $('#navbarNav .pagination li.page-item').removeClass('disabled');
-    if (numSeccion > 0) {
-        $('#navbarNav .pagination li.page-item.prev').removeClass('disabled');
+    if (numSecTotal < 1) {
+        $('#navbar>.anterior').hide();
+        $('#navbar>.siguiente').hide();
     } else {
-        $('#navbarNav .pagination li.page-item.prev').addClass('disabled');
+        if (numSeccion > 0) {
+            $('#navbar>.anterior').off().removeClass('disabled').click(function(ev){
+                ev.preventDefault();
+                cargaSeccion(numSeccion - 1);
+            });
+        } else {
+            $('#navbar>.anterior').addClass('disabled').off();
+        }
+        if (numSeccion >= numSecTotal) {
+            $('#navbar>.siguiente').addClass('disabled').off();
+        } else {
+            $('#navbar>.siguiente').removeClass('disabled').click(function(ev){
+                ev.preventDefault();
+                cargaSeccion(numSeccion + 1);
+            });
+        }
     }
-    if (numSeccion >= numSecTotal) {
-        $('#navbarNav .pagination li.page-item.sig').addClass('disabled');
-    } else {
-        $('#navbarNav .pagination li.page-item.sig').removeClass('disabled');
-    }
-    $('#navbarNav .pagination li.page-item.' + numLink).addClass('disabled');
-}
-function generaPaginacion() {
-    $('#navbarNav .pagination').html('<li class="page-item prev disabled"><a class="page-link" href="#" aria-label="previo"><span aria-hidden="true">&laquo;</span></a></li>');
-    $('#inicial .contenido .seccion').each(function(i,e){
-        numPag = String(i + 1);
-        disabled = (i == numSeccion) ? ' disabled' : '';
-        classPag = 'link-' + numPag;
-        $('#navbarNav .pagination').append('<li class="page-item' + disabled + ' ' + classPag + '"><a class="page-link" href="#' + numPag + '">' + numPag + '</a></li>');
-    });
-    $('#navbarNav .pagination').append('<li class="page-item sig"><a class="page-link" href="#" aria-label="siguiente"><span aria-hidden="true">&raquo;</span></a></li>');
-    $('#navbarNav .pagination li.page-item a.page-link').off().click(function(ev){
-        numSec = Number($(this).attr('href').substr(1)) - 1;
-        ev.preventDefault();
-        cargaSeccion(numSec);
-    });
-    $('#navbarNav .pagination li.page-item.prev a.page-link').off().click(function(ev){
-        ev.preventDefault();
-        cargaSeccion(numSeccion - 1);
-    });
-    $('#navbarNav .pagination li.page-item.sig a.page-link').off().click(function(ev){
-        ev.preventDefault();
-        cargaSeccion(numSeccion + 1);
-    });
 }
 // Funciones Generales
 function cargaVista(vista) {
@@ -142,7 +106,11 @@ function cargaVista(vista) {
                 iniciaPortada();
             });
         }
+        cargaTitulos();
     });
+}
+function cargaTitulos() {
+    $('#titulo>#tema').html(tema);
 }
 function accionesEspeciales() {
     switch (numVista) {

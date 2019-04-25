@@ -1,10 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light fixed-top navegacion d-flex flex-row justify-content-between">
-    <div class="navbar-brand volver">
-        <button type="button" class="btn btn-light" href="#">
-            <i class="fas fa-chevron-left"></i>
-            <span>Volver</span>
-        </button>
-    </div>
+<header class="barra">
     <div class="titulo">
         <div class="icono">
             <img src="./img/1-Icono.svg" class="img-fluid">
@@ -13,46 +7,39 @@
             Comienza la aventura
         </div>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="pagination navbar-nav">
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="previo">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="siguiente">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-        <div class="logo"></div>
-    </div>
-</nav>
-<div class="row">
-    <div class="col-md-1 d-none d-sm-block"></div>
-    <div class="contenido col-md-10 col">
-        <div class="seccion sec01">
-            <h5 class="titulo">Roma, un imperio sin límites</h5>
+    <div class="logo"></div>
+</header>
+<section class="contenido">
+    <div class="seccion sec01">
+        <div class="contenedor">
             <div class="video-youtube embed-responsive embed-responsive-16by9">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OisnjsDB8Fg?controls=0" allowfullscreen></iframe>
             </div>
         </div>
-        <div class="seccion sec02">
-            <div class="preg-detona">
-                <div class="fondo">
-                    <div class="texto">
-                        ¿Por qué seguimos siendo romanos?
-                    </div>
+    </div>
+    <div class="seccion sec02">
+        <div class="preg-detona">
+            <div class="fondo">
+                <div class="texto">
+                    ¿Por qué seguimos siendo romanos?
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-md-1 d-none d-sm-block"></div>
-</div>
+</section>
+<footer class="pie">
+    <nav id="navbar">
+        <a href="#" class="anterior"></a>
+        <a href="#" class="siguiente"></a>
+        <a href="#" class="volver"></a>
+    </nav>
+    <div id="titulo">
+        <div id="desafio">
+            Desafío
+        </div>
+        <div id="tema">
+            La civilización romana
+        </div>
+    </div>
+    <div class="figura"></div>
+</footer>
