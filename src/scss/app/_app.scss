@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    overflow: hidden;
 }
 /****** Variables *******/
 
@@ -8,6 +9,7 @@ $asignatura: 'cs';
 // Tipografía
 $serif: 'PT_Serif', 'Georgia', 'Times', serif;
 $sans-serif: 'Lato', 'Arial', 'Helvetica', sans-serif;
+$sans-serif-black: 'LatoBlack', 'Arial', 'Helvetica', sans-serif;
 $arial: 'Arial', 'Helvetica', sans-serif;
 $georgia: 'Georgia', 'Times', serif;
 $desafio-size: 54px;
@@ -22,6 +24,7 @@ $ancho-total: 1024px;
 $alto-total: 768px;
 $barra-height: 61px;
 $footer-height: 73px;
+$ancho-contenido: 823px;
 
 // Imágenes y logos
 $logo-barra: 26px;
@@ -40,6 +43,7 @@ $titulo-borde: map-get($variables, 'titulo-borde');
 // Colores
 $blanco: map-get($variables, 'blanco');
 $titulo-nav: map-get($variables, 'titulo-nav');
+$ap-soft: map-get($variables, 'ap-soft');
 $footer-color: map-get($variables, 'footer-color');
 $texto-resaltado: map-get($variables, 'texto-resaltado');
 $pag01-hard: map-get($variables, 'pag01-hard');
@@ -55,6 +59,7 @@ $pag04-light: map-get($variables, 'pag04-light');
 
 // Contenido
 #inicial {
+    border: solid 1px $tema-color;
     width: $ancho-total;
     height: $alto-total;
     margin: 0 auto;
@@ -64,9 +69,28 @@ $pag04-light: map-get($variables, 'pag04-light');
 }
 .ap {
     span:nth-of-type(1) {
-        color: #00aae1;
+        color: $ap-soft;
     }
     span:nth-of-type(2) {
-        color: #0b3158;
+        color: $titulo-nav;
     }
+}
+a {
+    color: $titulo-nav;
+    &:active,
+    &:visited,
+    &:checked {
+        color: $titulo-nav;
+    }
+    &:hover {
+        color: $ap-soft;
+    }
+}
+// Reinicios
+h3 {
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }

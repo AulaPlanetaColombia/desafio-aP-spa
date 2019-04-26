@@ -27,13 +27,13 @@ function iniciaPortada() {
 function iniciaPag() {
     if ($('#inicial .contenido .seccion').length > 1) {
         ocultaSecciones();
-        //generaPaginacion();
     } else {
-        $('#navbarNav .pagination').html('');
+        $('.anterior').hide();
+        $('.siguiente').hide();
     }
     $('#inicial').show().addClass('animated ' + animGen).on('animationend', function(){
         $('#inicial').removeClass('animated ' + animGen);
-        $('#navbar>.volver').off().click(function(){
+        $('.volver').off().click(function(){
             numSeccion = 0;
             cargaVista('portada');
         });
@@ -42,7 +42,6 @@ function iniciaPag() {
 function cargaSeccion(num) {
     numSeccion = num;
     ocultaSecciones();
-    accionesEspeciales();
 }
 function ocultaSecciones() {
     numSecTotal = $('#inicial .contenido .seccion').length - 1;
@@ -63,26 +62,21 @@ function ocultaSecciones() {
         }
         cargaTitulos();
     });
-    if (numSecTotal < 1) {
-        $('#navbar>.anterior').hide();
-        $('#navbar>.siguiente').hide();
+    if (numSeccion > 0) {
+        $('.anterior').off().removeClass('disabled').click(function(ev){
+            ev.preventDefault();
+            cargaSeccion(numSeccion - 1);
+        });
     } else {
-        if (numSeccion > 0) {
-            $('#navbar>.anterior').off().removeClass('disabled').click(function(ev){
-                ev.preventDefault();
-                cargaSeccion(numSeccion - 1);
-            });
-        } else {
-            $('#navbar>.anterior').addClass('disabled').off();
-        }
-        if (numSeccion >= numSecTotal) {
-            $('#navbar>.siguiente').addClass('disabled').off();
-        } else {
-            $('#navbar>.siguiente').removeClass('disabled').click(function(ev){
-                ev.preventDefault();
-                cargaSeccion(numSeccion + 1);
-            });
-        }
+        $('.anterior').addClass('disabled').off();
+    }
+    if (numSeccion >= numSecTotal) {
+        $('.siguiente').addClass('disabled').off();
+    } else {
+        $('.siguiente').off().removeClass('disabled').click(function(ev){
+            ev.preventDefault();
+            cargaSeccion(numSeccion + 1);
+        });
     }
 }
 // Funciones Generales
@@ -111,19 +105,6 @@ function cargaVista(vista) {
 }
 function cargaTitulos() {
     $('#titulo>#tema').html(tema);
-}
-function accionesEspeciales() {
-    switch (numVista) {
-        case 'pag04':
-            switch (numSeccion) {
-                case 2:
-                    $('.contenido').css('height', 'auto').css('padding', '5rem 0 3rem');
-                    break;
-                default:
-                    $('.contenido').css('height', '100vh').css('padding', '0');
-            }
-            break;
-    }
 }
 function dosDigitos(num) {
     return num < 10 ? '0' + num : String(num);

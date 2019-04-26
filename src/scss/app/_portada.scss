@@ -21,6 +21,26 @@
             margin-top: 7px;
         }
     }
+    .logo {
+        background-image: url('../int/logoPlaneta.svg');
+        width: 26px;
+        height: 26px;
+        background-repeat: no-repeat;
+        background-position: top right;
+        right: 10px;
+        top: 13px;
+        position: absolute;
+    }
+    .figura {
+        background-image: url('../img/figura.png');
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        width: 466px;
+        height: 385px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
     #botonera {
         width: 951px;
         height: 671px;
@@ -33,10 +53,13 @@
             width: 112px;
             height: 112px;
             &:hover {
-                background-image: url('../img/boton-sombra.svg');
+                background-image: url('../int/boton-sombra.svg');
                 .icono {
                     top: -2px;
                     left: -2px;
+                }
+                .texto {
+                    color: $titulo-nav;
                 }
             }
             .icono {
@@ -48,11 +71,11 @@
             }
             .texto {
                 position: absolute;
-                font-family: $sans-serif;
+                font-family: $sans-serif-black;
                 font-size: 20px;
-                font-weight: 800;
-                text-decoration: none !important;
-                color: #5B401F !important;
+                font-weight: bolder;
+                text-decoration: none;
+                color: #5B401F;
                 width: 350px;
             }
         }
