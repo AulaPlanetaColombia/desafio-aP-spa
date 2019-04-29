@@ -6,7 +6,7 @@
         top: 55px;
         left: 54px;
         #desafio {
-            font-family: $arial;
+            font-family: $sans-serif-black; //$arial;
             font-size: $desafio-size;
             font-weight: 800;
             line-height: 1.2;
@@ -14,7 +14,7 @@
             border-bottom: $titulo-borde;
         }
         #tema {
-            font-family: $georgia;
+            font-family: $sans-serif; //$georgia;
             font-size: $tema-size;
             color: $tema-color;
             line-height: 1;

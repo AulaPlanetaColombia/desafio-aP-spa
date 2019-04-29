@@ -7,17 +7,24 @@ body {
 $asignatura: 'cs';
 
 // Tipografía
-$serif: 'PT_Serif', 'Georgia', 'Times', serif;
 $sans-serif: 'Lato', 'Arial', 'Helvetica', sans-serif;
+$sans-serif-italic: 'LatoItalic', 'Arial', 'Helvetica', sans-serif;
 $sans-serif-black: 'LatoBlack', 'Arial', 'Helvetica', sans-serif;
+$sans-serif-bold: 'LatoBold', 'Arial', 'Helvetica', sans-serif;
+$sans-serif-blackitalic: 'LatoBlackItalic', 'Arial', 'Helvetica', sans-serif;
+$sans-serif-bolditalic: 'LatoBoldItalic', 'Arial', 'Helvetica', sans-serif;
+/*
+$serif: 'PT_Serif', 'Georgia', 'Times', serif;
 $arial: 'Arial', 'Helvetica', sans-serif;
 $georgia: 'Georgia', 'Times', serif;
+*/
 $desafio-size: 54px;
 $tema-size: 45px;
 $titulo-size: 1.5rem;
 $footer-desafio-size: 25px;
 $footer-tema-size: 20px;
 $pregunta-detona-size: 72px;
+$parrafo-size: 22px;
 
 // Páginas de contenido
 $ancho-total: 1024px;
@@ -30,6 +37,7 @@ $ancho-contenido: 823px;
 $logo-barra: 26px;
 $icono-barra: 66px;
 $navbar-boton: 23px;
+$circulo-prueba: 230px;
 
 // Variables por asignatura
 $variables: variables($asignatura);
@@ -56,6 +64,15 @@ $pag04-hard: map-get($variables, 'pag04-hard');
 $pag04-soft: map-get($variables, 'pag04-soft');
 $pag04-espe: map-get($variables, 'pag04-espe');
 $pag04-light: map-get($variables, 'pag04-light');
+$pag05-soft: map-get($variables, 'pag05-soft');
+$pag05-hard: map-get($variables, 'pag05-hard');
+$pag06-soft: map-get($variables, 'pag06-soft');
+$pag06-hard: map-get($variables, 'pag06-hard');
+$pag07-soft: map-get($variables, 'pag07-soft');
+$pag07-hard: map-get($variables, 'pag07-hard');
+$pag07-tran: map-get($variables, 'pag07-tran');
+$pag08-soft: map-get($variables, 'pag08-soft');
+$pag08-hard: map-get($variables, 'pag08-hard');
 
 // Contenido
 #inicial {
@@ -65,7 +82,8 @@ $pag04-light: map-get($variables, 'pag04-light');
     margin: 0 auto;
     background-repeat: no-repeat;
     position: relative;
-    //overflow: scroll !important;
+    overflow: hidden;
+    //overflow-y: scroll !important;
 }
 .ap {
     span:nth-of-type(1) {

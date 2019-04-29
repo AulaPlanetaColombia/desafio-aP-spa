@@ -18,7 +18,16 @@
             pag04-hard: #00b212,
             pag04-soft: #4dc959,
             pag04-espe: #bfd966,
-            pag04-light: #e4eed0
+            pag04-light: #e4eed0,
+            pag05-hard: #f5cc1f,
+            pag05-soft: #f8db62,
+            pag06-hard: #ff9100,
+            pag06-soft: #ffb24d,
+            pag07-hard: #4a6eab,
+            pag07-tran: rgba(74,110,171,0.9),
+            pag07-soft: #8099c4,
+            pag08-hard: #db6600,
+            pag08-soft: #db6600
         );
         @return $map;
     }

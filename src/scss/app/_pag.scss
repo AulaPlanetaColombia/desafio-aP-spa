@@ -24,18 +24,27 @@
                 font-size: 23px;
             }
         }
+        .volver {
+            width: $navbar-boton;
+            height: $navbar-boton;
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: inline-block;
+            background-image: url('../int/volver.svg');
+            position: absolute;
+            right: 10px;
+            top: 11px;
+        }
         .logo {
             width: $logo-barra;
             height: $logo-barra;
             background-image: url('../int/logoPlaneta.svg');
             background-size: cover;
             background-repeat: no-repeat;
-            position: absolute;
-            right: 10px;
-            top: 11px;
         }
     }
     .contenido {
+        /*overflow: scroll;*/
         padding-top: $barra-height;
         height: $alto-total - $barra-height - $footer-height;
         background-repeat: no-repeat;
@@ -61,7 +70,7 @@
                         font-size: $pregunta-detona-size;
                         font-weight: bolder;
                         text-align: center;
-                        width: 620px;
+                        width: 650px;
                     }
                 }
             }
@@ -78,7 +87,7 @@
             position: absolute;
             text-align: right;
             right: 108px;
-            top: 10px;
+            top: 4px;
             #desafio {
                 font-family: $sans-serif-black;
                 font-size: $footer-desafio-size;
@@ -88,7 +97,7 @@
                 border-bottom: $titulo-borde;
             }
             #tema {
-                font-family: $serif;
+                font-family: $sans-serif; //$serif;
                 font-size: $footer-tema-size;
                 color: $tema-color;
                 line-height: 1;
@@ -99,11 +108,11 @@
             background-image: url('../img/figura.png');
             background-size: cover;
             background-repeat: no-repeat;
-            width: 95px;
-            height: 82px;
             position: absolute;
-            right: 0;
-            top: -9px;
+            width: 100px;
+            height: 88px;
+            right: -6px;
+            top: -12px;
         }
         #navbar {
             position: absolute;
@@ -128,9 +137,6 @@
                     background-image: url('../int/sig-des.svg');
                 }
             }
-            .volver {
-                background-image: url('../int/volver.svg');
-            }
         }
     }
 }
@@ -140,10 +146,14 @@
         background-color: $pag01-soft;
     }
     .contenido {
+        .seccion {
+            height: $alto-total - $barra-height - $footer-height;
+        }
         .sec01 {
             .contenedor {
                 width: $ancho-contenido;
-                margin: 41px auto 0;
+                margin: 0 auto;
+                padding-top: 41px;
             }
         }
         .sec02 {
@@ -175,6 +185,7 @@
                 font-size: 28px;
                 margin: 38px;
                 color: $pag02-hard;
+                font-family: $sans-serif-black;
             }
             .imagen-apoyo {
                 max-width: 100%;
@@ -204,6 +215,7 @@
                 font-size: 28px;
                 width: 519px;
                 color: $pag03-hard;
+                font-family: $sans-serif-black;
             }
             .hilo {
                 position: absolute;
@@ -216,11 +228,13 @@
                     .aspecto {
                         position: absolute;
                         img {
-                            width: 93px;
-                            height: 93px;
+                            width: 85px;
+                            height: 85px;
                             display: block;
                         }
                         span {
+                            font-family: $sans-serif-bold;
+                            font-weight: bold;
                             text-align: center;
                             color: $titulo-nav;
                             display: block;
@@ -228,28 +242,28 @@
                             width: 93px;
                         }
                         &.asp1 {
-                            top: 62px;
-                            left: 105px;
+                            top: 79px;
+                            left: 121px;
                         }
                         &.asp2 {
                             top: -34px;
                             left: 349px;
                         }
                         &.asp3 {
-                            top: 206px;
+                            top: 243px;
                             left: 176px;
                         }
                         &.asp4 {
-                            top: 112px;
+                            top: 66px;
                             left: 297px;
                         }
                         &.asp5 {
-                            top: 113px;
-                            left: 509px;
+                            top: 19px;
+                            left: 490px;
                         }
                         &.asp6 {
-                            top: 235px;
-                            left: 410px;
+                            top: 165px;
+                            left: 496px;
                         }
                     }
                 }
@@ -263,12 +277,17 @@
     }
     .contenido {
         .seccion {
-            height: $alto-total;
+            height: $alto-total - $barra-height - $footer-height;
             background-position-y: $barra-height * -1;
             margin-top: ($barra-height + 6) * -1;
+            /*
+            background-attachment: fixed;
+            background-size: 77%;
+            background-position-x: 49%;
+            */
             .contenedor {
-                color: $titulo-nav;
                 position: relative;
+                color: $titulo-nav;
                 width: $ancho-contenido;
                 margin-left: ($ancho-total - $ancho-contenido) / 2;
                 margin-top: $barra-height + 6;
@@ -394,30 +413,196 @@
         }
     }
 }
-.raro {
-    flex-direction: row;
-    justify-content: space-between;
-    display: flex;
-    align-items: stretch;
-    .pasos {
-        width: 55%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding: 2em 0;
-        .paso {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            .numero {
-            }
-
-            .descripcion {
+.view-pag05 {
+    background-image: url('../img/fondo_pag05.jpg');
+    .barra {
+        background-color: $pag05-soft;
+    }
+    .contenido {
+        .seccion {
+            .contenedor {
                 color: $titulo-nav;
-                line-height: 0.6;
-                margin-left: 2.5rem;
-                margin-top: 0.75em;
+                width: $ancho-contenido;
+                margin-left: ($ancho-total - $ancho-contenido) / 2;
+                padding-bottom: 1em;
+                h3.texto-resaltado {
+                    font-family: $sans-serif-black;
+                    color: $pag05-hard;
+                    font-size: 26px;
+                    padding-top: 1.75em;
+                }
+                p {
+                    font-family: $sans-serif;
+                    font-weight: normal;
+                    font-size: $parrafo-size;
+                }
+                ul {
+                    margin-left: -1em;
+                    margin-top: 0;
+                    li {
+                        font-size: $parrafo-size;
+                        margin-top: 0.2em;
+                        &:first-of-type {
+                            padding-top: 0.55em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.view-pag06 {
+    background-image: url('../img/fondo_pag06.jpg');
+    .barra {
+        background-color: $pag06-soft;
+    }
+    .contenido {
+        .seccion {
+            .contenedor {
+                color: $titulo-nav;
+                width: $ancho-contenido;
+                margin-left: ($ancho-total - $ancho-contenido) / 2;
+                padding-bottom: 1em;
+                h3.texto-resaltado {
+                    font-family: $sans-serif-black;
+                    color: $pag06-hard;
+                    font-size: 26px;
+                    padding-top: 1.75em;
+                }
+                p {
+                    font-family: $sans-serif;
+                    font-weight: normal;
+                    font-size: $parrafo-size;
+                    img.icono {
+                        max-width: 1em;
+                        max-height: 1em;
+                        display: inline;
+                    }
+                }
+                ul {
+                    margin-left: -1em;
+                    margin-top: 0;
+                    li {
+                        font-size: $parrafo-size;
+                        margin-top: 0.2em;
+                        &:first-of-type {
+                            padding-top: 0.55em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.view-pag07 {
+    background-image: url('../img/fondo_pag07.jpg');
+    .barra {
+        background-color: $pag07-soft;
+        .titulo {
+            .icono {
+                img {
+                    max-height: 145%;
+                }
+            }
+        }
+    }
+    .contenido {
+        .seccion {
+            .contenedor {
+                color: $titulo-nav;
+                width: $ancho-contenido;
+                margin-left: ($ancho-total - $ancho-contenido) / 2;
+                padding-bottom: 1em;
+                h3.texto-resaltado {
+                    font-family: $sans-serif-black;
+                    color: $pag07-hard;
+                    font-size: 26px;
+                    padding-top: 1.75em;
+                    text-align: center;
+                }
+                figure.mosaico {
+                    position: relative;
+                    margin: 2em 0 0;
+                    background-color: $blanco;
+                    .imagenes {
+                        max-width: 100%;
+                        display: table;
+                        text-align: center;
+                        .img {
+                            max-width: 19%;
+                            display: inline-table;
+                            vertical-align: middle;
+                            padding-left: 4px;
+                            &:last-of-type {
+                                padding-right: 4px;
+                            }
+                        }
+                        &:first-of-type {
+                            padding-top: 4px;
+                        }
+                        &:last-of-type {
+                            padding: 4px 0;
+                        }
+                    }
+                    figcaption {
+                        position: absolute;
+                        top: 30px;
+                        left: ($ancho-contenido - $circulo-prueba) / 2;
+                        width: $circulo-prueba;
+                        height: $circulo-prueba;
+                        border-radius: 50%;
+                        background-color: $pag07-tran;//$pag07-hard;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: $sans-serif-black;
+                        font-size: 30px;
+                        padding: 1rem;
+                        span {
+                            color: $blanco;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.view-pag08 {
+    background-image: url('../img/fondo_pag08.jpg');
+    .barra {
+        background-color: $pag08-soft;
+    }
+    .contenido {
+        .seccion {
+            .contenedor {
+                color: $titulo-nav;
+                width: 580px;
+                margin-left: ($ancho-total - 580) / 2;
+                padding-bottom: 1em;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h3.texto-resaltado {
+                    font-family: $sans-serif-black;
+                    color: $pag08-hard;
+                    font-size: 30px;
+                    &:first-of-type {
+                        padding-top: 1.5em;
+                    }
+                    &:last-of-type {
+                        padding-top: 0.1em;
+                    }
+                }
+                p {
+                    font-size: 29px;
+                    margin: 0;
+                    &:last-of-type {
+                        margin-top: 0.5em;
+                        width: 10em;
+                    }
+                }
             }
         }
     }
