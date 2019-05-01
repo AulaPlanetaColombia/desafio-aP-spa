@@ -1,13 +1,14 @@
-var idioma = 'es';
 var asignatura = 'cs';
-var tema = 'La civilización romana';
 var animGen = 'fadeIn';
 var animSec = 'fadeIn';
 var numSeccion = 0;
 var dataPag = {};
 var numSecTotal, secVisible, numSec, nomSec, numPag, disabled, classPag, numSec, numVista;
 $(function(){
-    cargaVista('portada');
+    $.getJSON('data/datos.json', function(data){
+        dataPag = data;
+        cargaVista('portada');
+    });
 });
 // Funciones Portada
 function iniciaPortada() {
@@ -21,10 +22,13 @@ function iniciaPortada() {
     $('#inicial').show().addClass('animated ' + animGen).on('animationend', function(){
         $('#inicial').off().removeClass('animated ' + animGen);
     });
+    for (var i = 0;i < dataPag.contenido.length;i++) {
+        $('#botonera #btn' + dosDigitos(i+1) + ' .texto').html(dataPag.contenido[i].titulo);
+    }
 }
 
 // Funciones Página
-function iniciaPag() {
+function iniciaPag(vista) {
     if ($('#inicial .contenido .seccion').length > 1) {
         ocultaSecciones();
     } else {
@@ -38,6 +42,26 @@ function iniciaPag() {
             cargaVista('portada');
         });
     });
+    cargaContPagina(vista);
+}
+function cargaContPagina(vista) {
+    var num = Number(vista.substr(-2,2)) - 1;
+    var dpa = dataPag.contenido[num];
+    $('.barra>.titulo>.icono>img').attr('src', './int/' + dpa.icono);
+    $('.barra>.titulo>.texto').html(dpa.titulo);
+    switch (vista) {
+        case 'pag01':
+            $('.contenido .sec01 .video-youtube iframe.embed-responsive-item').attr('src', dpa.videoYoutube + '?controls=0');
+            $('.contenido .sec02 .preg-detona .texto').html(dpa.pregDetona);
+            break;
+        case 'pag02':
+            $('.contenido .sec01 .texto-inicial').html(dpa.textoInicial);
+            $('.contenido .sec01 .texto-resaltado').html(dpa.textoResaltado);
+            break;
+        case 'pag03':
+            $('.contenido .sec01 .texto-resaltado').html(dpa.textoResaltado);
+            break;
+    }
 }
 function cargaSeccion(num) {
     numSeccion = num;
@@ -90,21 +114,16 @@ function cargaVista(vista) {
         $('#inicial').addClass('view-' + vista).html(html).hide();
         if (vista !== 'portada') {
             $('#inicial').addClass('pagina');
-            $.getJSON('data/pag.json', function(data){
-                dataPag = data;
-                iniciaPag();
-            });
+            iniciaPag(vista);
         } else {
-            $.getJSON('data/portada.json', function(data){
-                dataPag = data;
-                iniciaPortada();
-            });
+            iniciaPortada();
         }
         cargaTitulos();
     });
 }
 function cargaTitulos() {
-    $('#titulo>#tema').html(tema);
+    $('#titulo>#desafio').html(dataPag.desafio);
+    $('#titulo>#tema').html(dataPag.tema);
 }
 function dosDigitos(num) {
     return num < 10 ? '0' + num : String(num);

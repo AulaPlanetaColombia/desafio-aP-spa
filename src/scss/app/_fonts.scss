@@ -64,7 +64,6 @@
     font-weight: bolder;
     text-rendering: optimizeLegibility;
 }
-/*
 @font-face {
     font-family: 'PT_Serif';
     src: url('../fonts/pt_serif-web-bold-webfont.woff2') format('woff2'),
@@ -72,6 +71,7 @@
         url('../fonts/PT_Serif-Web-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
+    text-rendering: optimizeLegibility;
 }
 @font-face {
     font-family: 'PT_Serif';
@@ -80,6 +80,7 @@
         url('../fonts/PT_Serif-Web-Italic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
+    text-rendering: optimizeLegibility;
 }
 @font-face {
     font-family: 'PT_Serif';
@@ -88,5 +89,5 @@
         url('../fonts/PT_Serif-Web-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    text-rendering: optimizeLegibility;
 }
-*/

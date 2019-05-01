@@ -1,0 +1,44 @@
+{
+    "asignatura": "cs",
+    "desafio": "Desafío",
+    "tema": "La civilización romana",
+    "contenido": [
+        {
+            "icono": "1-Icono.svg",
+            "titulo": "Comienza la aventura",
+            "videoYoutube": "https://www.youtube.com/embed/OisnjsDB8Fg",
+            "pregDetona": "¿Por qué seguimos siendo romanos?"
+        },
+        {
+            "icono": "2-Icono.svg",
+            "titulo": "En tus manos",
+            "textoInicial": "¿Alguna vez has pensado que el Coliseo de Roma o el Circo Máximo fueron en su día los equivalentes a nuestros estadios de fútbol y circuitos de Fórmula 1?",
+            "textoResaltado": "Acepta el desafío y descubre hasta qué punto podemos decir que somos herederos de la antigua Roma."
+        },
+        {
+            "icono": "3-Icono.svg",
+            "titulo": "Tira del hilo",
+            "textoResaltado": "Para poder responder a la gran pregunta, plantéate algunas preguntas básicas sobre los siguientes aspectos, claves para adentrarse en el estudio del pasado:"
+        },
+        {
+            "icono": "4-Icono.svg",
+            "titulo": "Escoge tu camino"
+        },
+        {
+            "icono": "5-Icono.svg",
+            "titulo": "Dale forma"
+        },
+        {
+            "icono": "6-Icono.svg",
+            "titulo": "Ve más allá"
+        },
+        {
+            "icono": "7-Icono.svg",
+            "titulo": "Ponte a prueba"
+        },
+        {
+            "icono": "8-Icono.svg",
+            "titulo": "Meta"
+        }
+    ]
+}

@@ -39,11 +39,18 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
+                        src: ['node_modules/showdown/dist/showdown.min.js'],
+                        rename: function () {
+                            return 'dist/js/showdown.js';
+                        }
+                    },
+                    {
+                        expand: true,
                         src: ['node_modules/jquery/dist/jquery.min.js'],
                         rename: function () {
                             return 'dist/js/jquery.js';
                         }
-                    },
+                    }/*,
                     {
                         expand: true,
                         src: ['node_modules/bootstrap/dist/js/bootstrap.min.js'],
@@ -122,7 +129,7 @@ module.exports = function(grunt) {
                         rename: function () {
                             return 'src/scss/bootstrap/_bootstrap.scss';
                         }
-                    }
+                    }*/
                 ],
             },
         },

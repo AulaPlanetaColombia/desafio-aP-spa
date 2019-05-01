@@ -97,7 +97,7 @@
                 border-bottom: $titulo-borde;
             }
             #tema {
-                font-family: $sans-serif; //$serif;
+                font-family: $serif;
                 font-size: $footer-tema-size;
                 color: $tema-color;
                 line-height: 1;
@@ -116,14 +116,17 @@
         }
         #navbar {
             position: absolute;
-            top: 27px;
-            left: 27px;
+            top: ($alto-total / 3) * -1; //27px;
+            left: 0; //27px;
             a {
-                width: $navbar-boton;
-                height: $navbar-boton;
-                background-size: contain;
+                width: $navbar-boton-width; //$navbar-boton
+                height: $navbar-boton-height; //$navbar-boton
+                background-color: $titulo-nav;
+                //background-size: contain;
+                background-size: 50%;
                 background-repeat: no-repeat;
                 display: inline-block;
+                background-position: center center;
             }
             .anterior {
                 background-image: url('../int/ant-act.svg');
@@ -133,9 +136,15 @@
             }
             .siguiente {
                 background-image: url('../int/sig-act.svg');
+                position: absolute;
+                left: $ancho-total - $navbar-boton-width;
+                top: 0;
                 &.disabled {
                     background-image: url('../int/sig-des.svg');
                 }
+            }
+            .volver {
+                display: none;
             }
         }
     }
