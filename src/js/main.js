@@ -4,6 +4,7 @@ var animSec = 'fadeIn';
 var numSeccion = 0;
 var dataPag = {};
 var numSecTotal, secVisible, numSec, nomSec, numPag, disabled, classPag, numSec, numVista;
+var converter = new showdown.Converter();
 $(function(){
     $.getJSON('data/datos.json', function(data){
         dataPag = data;
@@ -47,7 +48,6 @@ function iniciaPag(vista) {
 function cargaContPagina(vista) {
     var num = Number(vista.substr(-2,2)) - 1;
     var dpa = dataPag.contenido[num];
-    $('.barra>.titulo>.icono>img').attr('src', './int/' + dpa.icono);
     $('.barra>.titulo>.texto').html(dpa.titulo);
     switch (vista) {
         case 'pag01':
@@ -60,6 +60,10 @@ function cargaContPagina(vista) {
             break;
         case 'pag03':
             $('.contenido .sec01 .texto-resaltado').html(dpa.textoResaltado);
+            break;
+        case 'pag04':
+            $('.contenido .sec01 .texto-resaltado').html(dpa.sec01.textoResaltado);
+            $('.contenido .sec01 .texto').html(converter.makeHtml(dpa.sec01.texto));
             break;
     }
 }

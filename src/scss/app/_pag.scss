@@ -11,17 +11,17 @@
                 width: $icono-barra;
                 height: $icono-barra;
                 position: absolute;
-                left: 23px;
-                top: 21px;
+                left: 2.3rem;
+                top: 2.1rem;
             }
             .texto {
                 font-family: $sans-serif-black;
                 font-weight: bolder;
                 color: $titulo-nav;
                 position: absolute;
-                top: 15px;
-                left: 101px;
-                font-size: 23px;
+                top: 1.5rem;
+                left: 10.1rem;
+                font-size: 2.3rem;
             }
         }
         .volver {
@@ -32,8 +32,8 @@
             display: inline-block;
             background-image: url('../int/volver.svg');
             position: absolute;
-            right: 10px;
-            top: 11px;
+            right: 1.9rem;
+            top: 1.9rem;
         }
         .logo {
             width: $logo-barra;
@@ -52,28 +52,7 @@
         .seccion {
             width: 100%;
             font-family: $sans-serif;
-            .preg-detona {
-                width: 830px;
-                height: $alto-total - $barra-height - $footer-height;
-                margin: 0 auto;
-                .fondo {
-                    height: 830px;
-                    width: 830px;
-                    border-radius: 415px;
-                    margin-top: -122px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    .texto {
-                        color: $blanco;
-                        font-family: $sans-serif-black;
-                        font-size: $pregunta-detona-size;
-                        font-weight: bolder;
-                        text-align: center;
-                        width: 650px;
-                    }
-                }
-            }
+            font-size: 2.2rem;
         }
     }
     .pie {
@@ -86,8 +65,8 @@
         #titulo {
             position: absolute;
             text-align: right;
-            right: 108px;
-            top: 4px;
+            right: 10.8rem;
+            top: 0.4rem;
             #desafio {
                 font-family: $sans-serif-black;
                 font-size: $footer-desafio-size;
@@ -101,7 +80,7 @@
                 font-size: $footer-tema-size;
                 color: $tema-color;
                 line-height: 1;
-                margin-top: 4px;
+                margin-top: 0.4rem;
             }
         }
         .figura {
@@ -109,36 +88,44 @@
             background-size: cover;
             background-repeat: no-repeat;
             position: absolute;
-            width: 100px;
-            height: 88px;
-            right: -6px;
-            top: -12px;
+            width: 10.0rem;
+            height: 8.8rem;
+            right: -0.6rem;
+            top: -1.2rem;
         }
         #navbar {
             position: absolute;
-            top: ($alto-total / 3) * -1; //27px;
-            left: 0; //27px;
+            top: ($alto-total / 3) * -1; //2.7rem;
+            left: 0; //2.7rem;
             a {
-                width: $navbar-boton-width; //$navbar-boton
-                height: $navbar-boton-height; //$navbar-boton
-                background-color: $titulo-nav;
-                //background-size: contain;
-                background-size: 50%;
+                position: absolute;
+                width: $navbar-boton * 2;
+                height: $navbar-boton * 2;
+                border-radius: 50%;
+                background-size: 40%;
                 background-repeat: no-repeat;
                 display: inline-block;
-                background-position: center center;
+                &:hover {
+                    box-shadow: 2px 2px 4px #000;
+                }
+                &.disabled {
+                    display: none;
+                }
             }
             .anterior {
                 background-image: url('../int/ant-act.svg');
+                background-position: 45% center;
+                top: 0;
+                left: 0.5rem;
                 &.disabled {
                     background-image: url('../int/ant-des.svg');
                 }
             }
             .siguiente {
                 background-image: url('../int/sig-act.svg');
-                position: absolute;
-                left: $ancho-total - $navbar-boton-width;
+                background-position: 55% center;
                 top: 0;
+                left: $ancho-total - ($navbar-boton * 2) - 0.5rem;
                 &.disabled {
                     background-image: url('../int/sig-des.svg');
                 }
@@ -151,6 +138,11 @@
 }
 .view-pag01 {
     background-image: url('../img/fondo_pag01.jpg');
+    #navbar {
+        a {
+            background-color: $pag01-hard;
+        }
+    }
     .barra {
         background-color: $pag01-soft;
     }
@@ -162,13 +154,31 @@
             .contenedor {
                 width: $ancho-contenido;
                 margin: 0 auto;
-                padding-top: 41px;
+                padding-top: 4.1rem;
             }
         }
         .sec02 {
             .preg-detona {
+                width: 83.0rem;
+                height: $alto-total - $barra-height - $footer-height;
+                margin: 0 auto;
                 .fondo {
                     background-color: $pag01-hard;
+                    height: 83.0rem;
+                    width: 83.0rem;
+                    border-radius: 41.5rem;
+                    margin-top: -12.2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .texto {
+                        color: $blanco;
+                        font-family: $sans-serif-black;
+                        font-size: $pregunta-detona-size;
+                        font-weight: bolder;
+                        text-align: center;
+                        width: 65.0rem;
+                    }
                 }
             }
         }
@@ -176,6 +186,11 @@
 }
 .view-pag02 {
     background-image: url('../img/fondo_pag02.jpg');
+    #navbar {
+        a {
+            background-color: $pag02-hard;
+        }
+    }
     .barra {
         background-color: $pag02-soft;
     }
@@ -183,16 +198,16 @@
         .sec01 {
             width: $ancho-contenido;
             margin-left: ($ancho-total - $ancho-contenido) / 2;
-            border-radius: 26px;
+            border-radius: 2.6rem;
             background-color: $blanco;
-            margin-top: 60px;
+            margin-top: 6.0rem;
             .texto-inicial {
-                font-size: 25px;
-                margin: 38px 38px 0 38px;
+                //font-size: 25px;
+                margin: 3.8rem 3.8rem 0 3.8rem;
             }
             .texto-resaltado {
-                font-size: 28px;
-                margin: 38px;
+                //font-size: 28px;
+                margin: 3.8rem;
                 color: $pag02-hard;
                 font-family: $sans-serif-black;
             }
@@ -212,6 +227,11 @@
 }
 .view-pag03 {
     background-image: url('../img/fondo_pag03.jpg');
+    #navbar {
+        a {
+            background-color: $pag03-hard;
+        }
+    }
     .barra {
         background-color: $pag03-soft;
     }
@@ -219,60 +239,62 @@
         .sec01 {
             .texto-resaltado {
                 position: absolute;
-                left: 106px;
-                top: 105px;
-                font-size: 28px;
-                width: 519px;
+                left: 10.6rem;
+                top: 10.5rem;
+                //font-size: 28px;
+                width: 51.9rem;
                 color: $pag03-hard;
                 font-family: $sans-serif-black;
+                font-weight: bolder;
             }
             .hilo {
                 position: absolute;
-                top: 316px;
-                left: 86px;
-                width: 682px;
-                height: 379px;
+                top: 31.6rem;
+                left: 8.6rem;
+                width: 68.2rem;
+                height: 37.9rem;
                 .aspectos {
                     position: relative;
                     .aspecto {
                         position: absolute;
                         img {
-                            width: 85px;
-                            height: 85px;
+                            width: 8.5rem;
+                            height: 8.5rem;
                             display: block;
                         }
                         span {
                             font-family: $sans-serif-bold;
                             font-weight: bold;
+                            font-size: 1.4rem;
                             text-align: center;
                             color: $titulo-nav;
                             display: block;
                             margin-top: 0.5em;
-                            width: 93px;
+                            width: 9.3rem;
                         }
                         &.asp1 {
-                            top: 79px;
-                            left: 121px;
+                            top: 7.9rem;
+                            left: 12.1rem;
                         }
                         &.asp2 {
-                            top: -34px;
-                            left: 349px;
+                            top: -3.4rem;
+                            left: 34.9rem;
                         }
                         &.asp3 {
-                            top: 243px;
-                            left: 176px;
+                            top: 24.3rem;
+                            left: 17.6rem;
                         }
                         &.asp4 {
-                            top: 66px;
-                            left: 297px;
+                            top: 17.2rem;
+                            left: 31.3rem;
                         }
                         &.asp5 {
-                            top: 19px;
-                            left: 490px;
+                            top: 1.9rem;
+                            left: 49.0rem;
                         }
                         &.asp6 {
-                            top: 165px;
-                            left: 496px;
+                            top: 16.5rem;
+                            left: 49.6rem;
                         }
                     }
                 }
@@ -281,6 +303,11 @@
     }
 }
 .view-pag04 {
+    #navbar {
+        a {
+            background-color: $pag04-hard;
+        }
+    }
     .barra {
         background-color: $pag04-soft;
     }
@@ -289,11 +316,6 @@
             height: $alto-total - $barra-height - $footer-height;
             background-position-y: $barra-height * -1;
             margin-top: ($barra-height + 6) * -1;
-            /*
-            background-attachment: fixed;
-            background-size: 77%;
-            background-position-x: 49%;
-            */
             .contenedor {
                 position: relative;
                 color: $titulo-nav;
@@ -303,20 +325,20 @@
                 h3.texto-resaltado {
                     font-family: $sans-serif-black;
                     color: $pag04-hard;
-                    font-size: 36px;
+                    //font-size: 3.6rem;
                     padding-top: 1.35em;
                     width: 22em;
                 }
                 p {
                     font-family: $sans-serif;
                     font-weight: normal;
-                    font-size: 27px;
-                    margin-top: 21px;
+                    //font-size: 27px;
+                    margin-top: 2.1rem;
                 }
                 ul {
                     margin-left: -1em;
                     li {
-                        font-size: 24px;
+                        //font-size: 2.4rem;
                         margin-top: 0.2em;
                         &:first-of-type {
                             padding-top: 0.55em;
@@ -329,7 +351,7 @@
             background-image: url('../img/fondo_pag04_sec01.jpg');
             .contenedor {
                 h3.texto-resaltado {
-                    font-size: 28px;
+                    //font-size: 28px;
                     padding-top: 1.75em;
                 }
             }
@@ -343,42 +365,42 @@
                 .texto-resaltado-inv {
                     position: absolute;
                     font-family: $sans-serif-black;
-                    font-size: 38px;
+                    //font-size: 38px;
                     color: $blanco;
-                    top: 266px;
-                    left: 70px;
+                    top: 26.6rem;
+                    left: 7.0rem;
                     max-width: 7em;
                 }
                 .pasos {
                     position: absolute;
-                    left: 470px;
-                    top: 85px;
+                    left: 47.0rem;
+                    top: 8.5rem;
                     .paso {
                         position: absolute;
                         left: 0;
                         .numero {
                             position: absolute;
-                            font-size: 40px;
-                            width: 66px;
-                            height: 66px;
+                            font-size: 4.0rem;
+                            width: 6.6rem;
+                            height: 6.6rem;
                             border-radius: 50%;
                             background-color: $pag04-espe;
                             color: $blanco;
                             font-family: $sans-serif-black;
                             span {
                                 position: absolute;
-                                left: 21px;
-                                top: 8px;
+                                left: 2.1rem;
+                                top: 0.8rem;
                             }
                         }
                         .descripcion {
                             position: absolute;
                             top: 0;
-                            left: 103px;
+                            left: 10.3rem;
                             width: 20em;
                             line-height: 0.2;
                             p {
-                                font-size: 22px;
+                                font-size: 2.2rem;
                             }
                         }
                         &:nth-of-type(1),
@@ -388,11 +410,11 @@
                             .numero:before {
                                 content: '';
                                 position: absolute;
-                                width: 8px;
-                                height: 50px;
+                                width: 0.8rem;
+                                height: 5.0rem;
                                 background-color: #e4eed0;
-                                left: 30px;
-                                top: 59px;
+                                left: 3.0rem;
+                                top: 5.9rem;
                                 z-index: -3;
                             }
                         }
@@ -401,16 +423,16 @@
                         top: 0;
                     }
                     .paso02 {
-                        top: 99px;
+                        top: 9.9rem;
                     }
                     .paso03 {
-                        top: 198px;
+                        top: 19.8rem;
                     }
                     .paso04 {
-                        top: 296px;
+                        top: 29.6rem;
                     }
                     .paso05 {
-                        top: 394px;
+                        top: 39.4rem;
                     }
                 }
             }
@@ -424,6 +446,11 @@
 }
 .view-pag05 {
     background-image: url('../img/fondo_pag05.jpg');
+    #navbar {
+        a {
+            background-color: $pag05-hard;
+        }
+    }
     .barra {
         background-color: $pag05-soft;
     }
@@ -437,7 +464,7 @@
                 h3.texto-resaltado {
                     font-family: $sans-serif-black;
                     color: $pag05-hard;
-                    font-size: 26px;
+                    //font-size: 26px;
                     padding-top: 1.75em;
                 }
                 p {
@@ -462,6 +489,11 @@
 }
 .view-pag06 {
     background-image: url('../img/fondo_pag06.jpg');
+    #navbar {
+        a {
+            background-color: $pag06-hard;
+        }
+    }
     .barra {
         background-color: $pag06-soft;
     }
@@ -475,7 +507,7 @@
                 h3.texto-resaltado {
                     font-family: $sans-serif-black;
                     color: $pag06-hard;
-                    font-size: 26px;
+                    //font-size: 26px;
                     padding-top: 1.75em;
                 }
                 p {
@@ -505,6 +537,11 @@
 }
 .view-pag07 {
     background-image: url('../img/fondo_pag07.jpg');
+    #navbar {
+        a {
+            background-color: $pag07-hard;
+        }
+    }
     .barra {
         background-color: $pag07-soft;
         .titulo {
@@ -525,7 +562,7 @@
                 h3.texto-resaltado {
                     font-family: $sans-serif-black;
                     color: $pag07-hard;
-                    font-size: 26px;
+                    //font-size: 26px;
                     padding-top: 1.75em;
                     text-align: center;
                 }
@@ -541,32 +578,34 @@
                             max-width: 19%;
                             display: inline-table;
                             vertical-align: middle;
-                            padding-left: 4px;
+                            padding-left: 0.4rem;
                             &:last-of-type {
-                                padding-right: 4px;
+                                padding-right: 0.4rem;
                             }
                         }
                         &:first-of-type {
-                            padding-top: 4px;
+                            margin-top: -2rem;
+                            padding-top: 0.4rem;
                         }
                         &:last-of-type {
-                            padding: 4px 0;
+                            margin-top: 12rem;
+                            padding: 0.4rem 0;
                         }
                     }
                     figcaption {
                         position: absolute;
-                        top: 30px;
+                        top: 9.0rem;
                         left: ($ancho-contenido - $circulo-prueba) / 2;
                         width: $circulo-prueba;
                         height: $circulo-prueba;
                         border-radius: 50%;
-                        background-color: $pag07-tran;//$pag07-hard;
+                        background-color: $pag07-hard;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         font-family: $sans-serif-black;
-                        font-size: 30px;
-                        padding: 1rem;
+                        font-size: 3.0rem;
+                        padding: 1.6rem;
                         span {
                             color: $blanco;
                             text-align: center;
@@ -579,6 +618,11 @@
 }
 .view-pag08 {
     background-image: url('../img/fondo_pag08.jpg');
+    #navbar {
+        a {
+            background-color: $pag08-hard;
+        }
+    }
     .barra {
         background-color: $pag08-soft;
     }
@@ -586,8 +630,8 @@
         .seccion {
             .contenedor {
                 color: $titulo-nav;
-                width: 580px;
-                margin-left: ($ancho-total - 580) / 2;
+                width: 58.0rem;
+                margin-left: ($ancho-total - 58.0) / 2;
                 padding-bottom: 1em;
                 text-align: center;
                 display: flex;
@@ -596,7 +640,7 @@
                 h3.texto-resaltado {
                     font-family: $sans-serif-black;
                     color: $pag08-hard;
-                    font-size: 30px;
+                    //font-size: 30px;
                     &:first-of-type {
                         padding-top: 1.5em;
                     }
@@ -605,11 +649,11 @@
                     }
                 }
                 p {
-                    font-size: 29px;
-                    margin: 0;
+                    //font-size: 29px;
+                    margin: 2rem 0;
                     &:last-of-type {
                         margin-top: 0.5em;
-                        width: 10em;
+                        width: 16em;
                     }
                 }
             }

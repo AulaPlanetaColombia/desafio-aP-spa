@@ -1,11 +1,45 @@
-body {
-    margin: 0;
-    overflow: hidden;
+html {
+    font-size: 10px;
+    body {
+        margin: 0;
+        overflow: hidden;
+    }
 }
 /****** Variables *******/
 
 $asignatura: 'cs';
 
+// Media queries base
+/*
+html {
+    font-size: 10px;
+}
+@media screen and (max-width: 1023px) {
+    html {
+        font-size: 6px;
+    }
+}
+@media screen and (max-height: 767px) {
+    html {
+        font-size: 6px;
+    }
+}
+@media screen and (min-width: 1024px) and (min-height: 768px) {
+    html {
+        font-size: 10px;
+    }
+}
+@media screen and (min-width: 1280px) and (min-height: 960px) {
+    html {
+        font-size: 12.5px;
+    }
+}
+@media screen and (min-width: 2560px) and (min-height: 1920px) {
+    html {
+        font-size: 25px;
+    }
+}
+//*/
 // Tipografía
 $sans-serif: 'Lato', 'Arial', 'Helvetica', sans-serif;
 $sans-serif-italic: 'LatoItalic', 'Arial', 'Helvetica', sans-serif;
@@ -18,28 +52,28 @@ $serif: 'PT_Serif', 'Georgia', 'Times', serif;
 $arial: 'Arial', 'Helvetica', sans-serif;
 $georgia: 'Georgia', 'Times', serif;
 */
-$desafio-size: 54px;
-$tema-size: 45px;
-$titulo-size: 1.5rem;
-$footer-desafio-size: 25px;
-$footer-tema-size: 20px;
-$pregunta-detona-size: 72px;
-$parrafo-size: 22px;
+$desafio-size: 5.4rem;
+$tema-size: 4.5rem;
+$titulo-size: 2.4rem;
+$footer-desafio-size: 2.5rem;
+$footer-tema-size: 2.0rem;
+$pregunta-detona-size: 7.2rem;
+$parrafo-size: 2.2rem;
 
 // Páginas de contenido
-$ancho-total: 1024px;
-$alto-total: 768px;
-$barra-height: 61px;
-$footer-height: 73px;
-$ancho-contenido: 823px;
+$ancho-total: 102.4rem;
+$alto-total: 76.8rem;
+$barra-height: 6.1rem;
+$footer-height: 7.3rem;
+$ancho-contenido: 82.3rem;
 
 // Imágenes y logos
-$logo-barra: 26px;
-$icono-barra: 66px;
-$navbar-boton: 23px;
-$navbar-boton-width: 33px;
-$navbar-boton-height: 43px;
-$circulo-prueba: 230px;
+$logo-barra: 2.6rem;
+$icono-barra: 6.6rem;
+$navbar-boton: 2.3rem;
+$navbar-boton-width: 3.3rem;
+$navbar-boton-height: 4.3rem;
+$circulo-prueba: 23.0rem;
 
 // Variables por asignatura
 $variables: variables($asignatura);

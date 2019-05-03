@@ -1,10 +1,11 @@
 .view-portada {
     background-image: url('../img/portada.jpg');
+    background-size: contain;
     #titulo {
-        width: 390px;
+        width: 39.0rem;
         position: absolute;
-        top: 55px;
-        left: 54px;
+        top: 5.5rem;
+        left: 5.4rem;
         #desafio {
             font-family: $sans-serif-black; //$arial;
             font-size: $desafio-size;
@@ -18,53 +19,54 @@
             font-size: $tema-size;
             color: $tema-color;
             line-height: 1;
-            margin-top: 7px;
+            margin-top: 0.7rem;
         }
     }
     .logo {
         background-image: url('../int/logoPlaneta.svg');
-        width: 26px;
-        height: 26px;
+        width: 2.6rem;
+        height: 2.6rem;
         background-repeat: no-repeat;
         background-position: top right;
-        right: 10px;
-        top: 13px;
+        right: 1.0rem;
+        top: 1.3rem;
         position: absolute;
     }
     .figura {
         background-image: url('../img/figura.png');
         background-repeat: no-repeat;
         background-position: bottom right;
-        width: 466px;
-        height: 385px;
+        background-size: contain;
+        width: 46.6rem;
+        height: 38.5rem;
         position: absolute;
         right: 0;
         bottom: 0;
     }
     #botonera {
-        width: 951px;
-        height: 671px;
+        width: 95.1rem;
+        height: 67.1rem;
         position: absolute;
         bottom: 0;
         left: 0;
         a {
             position: absolute;
             background-repeat: no-repeat;
-            width: 112px;
-            height: 112px;
+            width: 11.2rem;
+            height: 11.2rem;
             &:hover {
                 background-image: url('../int/boton-sombra.svg');
                 .icono {
-                    top: -2px;
-                    left: -2px;
+                    top: -0.2rem;
+                    left: -0.2rem;
                 }
                 .texto {
                     color: $titulo-nav;
                 }
             }
             .icono {
-                width: 112px;
-                height: 112px;
+                width: 11.2rem;
+                height: 11.2rem;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -72,75 +74,75 @@
             .texto {
                 position: absolute;
                 font-family: $sans-serif-black;
-                font-size: 20px;
+                font-size: 2.0rem;
                 font-weight: bolder;
                 text-decoration: none;
                 color: #5B401F;
-                width: 350px;
+                width: 35.0rem;
             }
         }
         #btn01 {
-            bottom: 113px;
-            left: 72px;
+            bottom: 11.3rem;
+            left: 7.2rem;
             .texto {
-                left: 89px;
-                top: 97px;
+                left: 8.9rem;
+                top: 9.7rem;
             }
         }
         #btn02 {
-            bottom: 219px;
-            left: 149px;
+            bottom: 21.9rem;
+            left: 14.9rem;
             .texto {
-                left: 74px;
-                top: 105px;
+                left: 7.4rem;
+                top: 10.5rem;
             }
         } 
         #btn03 {
-            bottom: 308px;
-            left: 235px;
+            bottom: 30.8rem;
+            left: 23.5rem;
             .texto {
-                left: 60px;
-                top: 107px;
+                left: 6.0rem;
+                top: 10.7rem;
             }
         }
         #btn04 {
-            bottom: 390px;
-            left: 331px;
+            bottom: 39.0rem;
+            left: 33.1rem;
             .texto {
-                left: 52px;
-                top: 108px;
+                left: 5.2rem;
+                top: 10.8rem;
             }
         }
         #btn05 {
-            bottom: 459px;
-            left: 445px;
+            bottom: 45.9rem;
+            left: 44.5rem;
             .texto {
-                left: 31px;
-                top: 108px;
+                left: 3.1rem;
+                top: 10.8rem;
             }
         }
         #btn06 {
-            bottom: 510px;
-            left: 573px;
+            bottom: 51.0rem;
+            left: 57.3rem;
             .texto {
-                left: 6px;
-                top: 106px;
+                left: 0.6rem;
+                top: 10.6rem;
             }
         }
         #btn07 {
-            bottom: 541px;
-            left: 712px;
+            bottom: 54.1rem;
+            left: 71.2rem;
             .texto {
-                left: -14px;
-                top: 106px;
+                left: -1.4rem;
+                top: 10.6rem;
             }
         }
         #btn08 {
-            bottom: 559px;
-            left: 852px;
+            bottom: 55.9rem;
+            left: 85.2rem;
             .texto {
-                left: 30px;
-                top: 106px;
+                left: 3.0rem;
+                top: 10.6rem;
             }
         }
     }
