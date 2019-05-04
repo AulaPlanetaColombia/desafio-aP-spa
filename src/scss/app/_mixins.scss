@@ -27,12 +27,39 @@
             pag07-tran: rgba(74,110,171,0.9),
             pag07-soft: #8099c4,
             pag08-hard: #db6600,
-            pag08-soft: #db6600
+            pag08-soft: #db6600,
+            asign-soft: #dad1c4,
+            asign-hard: #b9a78d,
+            bg-portada: url('../int/portada_cs.jpg')
         );
         @return $map;
     }
 }
-
+@mixin media-queries($anchos...) {
+    $minancho: nth($anchos, 1) - 1;
+    $minalto: ($minancho / 4) * 3;
+    @media screen and (max-width: #{$minancho}) {
+        html {
+            font-size: 6px;
+        }
+    }
+    @media screen and (max-height: #{$minalto}) {
+        html {
+            font-size: 6px;
+        }
+    }
+    @each $var in $anchos {
+        $k: $var / 1024;
+        $alto: ($k * 768);
+        $ancho: $var;
+        $font: $k * 10;
+        @media screen and (min-width: #{$ancho}) and (min-height: #{$alto}) {
+            html {
+                font-size: #{$font};
+            }
+        }
+    }
+}
 // Desde Bootstrap
 
 $embed-responsive-aspect-ratios: () !default;

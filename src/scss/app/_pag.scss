@@ -1,4 +1,5 @@
 .pagina {
+    background-size: 100%;
     .barra {
         width: $ancho-total;
         height: $barra-height;
@@ -80,7 +81,7 @@
                 font-size: $footer-tema-size;
                 color: $tema-color;
                 line-height: 1;
-                margin-top: 0.4rem;
+                margin-top: 0.2rem;
             }
         }
         .figura {
@@ -105,6 +106,7 @@
                 background-size: 40%;
                 background-repeat: no-repeat;
                 display: inline-block;
+                //background-color: $asign-hard !important;
                 &:hover {
                     box-shadow: 2px 2px 4px #000;
                 }
@@ -210,6 +212,7 @@
                 margin: 3.8rem;
                 color: $pag02-hard;
                 font-family: $sans-serif-black;
+                font-weight: bolder;
             }
             .imagen-apoyo {
                 max-width: 100%;
@@ -315,6 +318,7 @@
         .seccion {
             height: $alto-total - $barra-height - $footer-height;
             background-position-y: $barra-height * -1;
+            background-size: 100%;
             margin-top: ($barra-height + 6) * -1;
             .contenedor {
                 position: relative;
@@ -365,9 +369,10 @@
                 .texto-resaltado-inv {
                     position: absolute;
                     font-family: $sans-serif-black;
+                    font-weight: bolder;
                     //font-size: 38px;
                     color: $blanco;
-                    top: 26.6rem;
+                    top: 28rem;
                     left: 7.0rem;
                     max-width: 7em;
                 }
@@ -653,7 +658,7 @@
                     margin: 2rem 0;
                     &:last-of-type {
                         margin-top: 0.5em;
-                        width: 16em;
+                        width: 18em;
                     }
                 }
             }

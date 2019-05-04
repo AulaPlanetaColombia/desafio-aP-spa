@@ -10,7 +10,8 @@ html {
 $asignatura: 'cs';
 
 // Media queries base
-/*
+@include media-queries(640px, 720px, 800px, 960px, 1024px, 1280px, 2560px);
+/**
 html {
     font-size: 10px;
 }
@@ -41,22 +42,18 @@ html {
 }
 //*/
 // Tipografía
-$sans-serif: 'Lato', 'Arial', 'Helvetica', sans-serif;
-$sans-serif-italic: 'LatoItalic', 'Arial', 'Helvetica', sans-serif;
-$sans-serif-black: 'LatoBlack', 'Arial', 'Helvetica', sans-serif;
-$sans-serif-bold: 'LatoBold', 'Arial', 'Helvetica', sans-serif;
-$sans-serif-blackitalic: 'LatoBlackItalic', 'Arial', 'Helvetica', sans-serif;
-$sans-serif-bolditalic: 'LatoBoldItalic', 'Arial', 'Helvetica', sans-serif;
-$serif: 'PT_Serif', 'Georgia', 'Times', serif;
-/*
-$arial: 'Arial', 'Helvetica', sans-serif;
-$georgia: 'Georgia', 'Times', serif;
-*/
+$sans-serif: 'Arial', 'Helvetica', 'Lato', sans-serif;
+$sans-serif-italic: 'Arial', 'Helvetica', 'LatoItalic', sans-serif;
+$sans-serif-black: 'Arial', 'Helvetica', 'LatoBlack', sans-serif;
+$sans-serif-bold: 'Arial', 'Helvetica', 'LatoBold', sans-serif;
+$sans-serif-blackitalic: 'Arial', 'Helvetica', 'LatoBlackItalic', sans-serif;
+$sans-serif-bolditalic: 'Arial', 'Helvetica', 'LatoBoldItalic', sans-serif;
+$serif: 'Times New Roman', 'Times','PT_Serif', serif;
 $desafio-size: 5.4rem;
 $tema-size: 4.5rem;
 $titulo-size: 2.4rem;
-$footer-desafio-size: 2.5rem;
-$footer-tema-size: 2.0rem;
+$footer-desafio-size: 2.25rem;
+$footer-tema-size: 1.75rem;
 $pregunta-detona-size: 7.2rem;
 $parrafo-size: 2.2rem;
 
@@ -83,8 +80,9 @@ $desafio-color: map-get($variables, 'desafio-color');
 $tema-color: map-get($variables, 'tema-color');
 $titulo-borde: map-get($variables, 'titulo-borde');
 
-
 // Colores
+$asign-soft: map-get($variables, 'asign-soft');
+$asign-hard: map-get($variables, 'asign-hard');
 $blanco: map-get($variables, 'blanco');
 $titulo-nav: map-get($variables, 'titulo-nav');
 $ap-soft: map-get($variables, 'ap-soft');
@@ -109,6 +107,9 @@ $pag07-hard: map-get($variables, 'pag07-hard');
 $pag07-tran: map-get($variables, 'pag07-tran');
 $pag08-soft: map-get($variables, 'pag08-soft');
 $pag08-hard: map-get($variables, 'pag08-hard');
+
+// Backgrounds
+$bg-portada: map-get($variables, 'bg-portada');
 
 // Contenido
 #inicial {

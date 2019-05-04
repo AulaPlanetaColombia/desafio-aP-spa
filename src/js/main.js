@@ -43,7 +43,7 @@ function iniciaPag(vista) {
             cargaVista('portada');
         });
     });
-    cargaContPagina(vista);
+    //cargaContPagina(vista);
 }
 function cargaContPagina(vista) {
     var num = Number(vista.substr(-2,2)) - 1;
