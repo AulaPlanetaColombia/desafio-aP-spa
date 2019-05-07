@@ -3,7 +3,6 @@ var animSec = 'fadeIn';
 var numSeccion = 0;
 var dataPag = {};
 var numSecTotal, secVisible, numSec, nomSec, numPag, disabled, classPag, numSec, numVista;
-var converter = new showdown.Converter();
 $(function(){
     $.getJSON('data/datos.json', function(data){
         dataPag = data;
@@ -13,10 +12,10 @@ $(function(){
             cargaVista('portada');
         }, function() {
             console.log("¡¡Error de precarga!!");
+            cargaVista('portada');
         }, function(progress) {
             $('#inicial .progress').css('width', Math.round(progress * 100) + '%');
         });
-        //
     });
 });
 // Funciones Portada
@@ -51,29 +50,12 @@ function iniciaPag(vista) {
             cargaVista('portada');
         });
     });
-    //cargaContPagina(vista);
+    cargaContPagina(vista);
 }
 function cargaContPagina(vista) {
     var num = Number(vista.substr(-2,2)) - 1;
     var dpa = dataPag.contenido[num];
     $('.barra>.titulo>.texto').html(dpa.titulo);
-    switch (vista) {
-        case 'pag01':
-            $('.contenido .sec01 .video-youtube iframe.embed-responsive-item').attr('src', dpa.videoYoutube + '?controls=0');
-            $('.contenido .sec02 .preg-detona .texto').html(dpa.pregDetona);
-            break;
-        case 'pag02':
-            $('.contenido .sec01 .texto-inicial').html(dpa.textoInicial);
-            $('.contenido .sec01 .texto-resaltado').html(dpa.textoResaltado);
-            break;
-        case 'pag03':
-            $('.contenido .sec01 .texto-resaltado').html(dpa.textoResaltado);
-            break;
-        case 'pag04':
-            $('.contenido .sec01 .texto-resaltado').html(dpa.sec01.textoResaltado);
-            $('.contenido .sec01 .texto').html(converter.makeHtml(dpa.sec01.texto));
-            break;
-    }
 }
 function cargaSeccion(num) {
     numSeccion = num;
