@@ -1,36 +1,25 @@
 @function variables($asignatura) {
     @if $asignatura == 'cs' {
         $map: (
-            desafio-color: #0B3158,
-            tema-color: #89765E,
             titulo-borde: 1px solid rgba(185,167,141,0.25),
-            blanco: #fff,
-            titulo-nav: #0b3158,
-            ap-soft: #00aae1,
-            footer-color: #0b3158,
-            texto-resaltado: #0b3158,
-            pag01-hard: #776db0,
-            pag01-soft: #d6d3e7,
-            pag02-hard: #e54d3d,
-            pag02-soft: #eb7064,
-            pag03-hard: #33bbe7,
-            pag03-soft: #33bbe7,
-            pag04-hard: #00b212,
-            pag04-soft: #4dc959,
-            pag04-espe: #bfd966,
-            pag04-light: #e4eed0,
-            pag05-hard: #f5cc1f,
-            pag05-soft: #f8db62,
-            pag06-hard: #ff9100,
-            pag06-soft: #ffb24d,
-            pag07-hard: #4a6eab,
-            pag07-tran: rgba(74,110,171,0.9),
-            pag07-soft: #8099c4,
-            pag08-hard: #db6600,
-            pag08-soft: #db6600,
-            asign-soft: #dad1c4,
-            asign-hard: #b9a78d,
-            bg-portada: url('../int/portada_cs.jpg')
+            asign-soft: #89765e,
+            asign-hard: #5b401f
+        );
+        @return $map;
+    }
+    @if $asignatura == 'cn' {
+        $map: (
+            titulo-borde: 1px solid rgba(51,116,117,0.25),
+            asign-soft: #b3d25d,
+            asign-hard: #337411
+        );
+        @return $map;
+    }
+    @if $asignatura == 'fq' {
+        $map: (
+            titulo-borde: 1px solid rgba(0,138,59,0.25),
+            asign-soft: #47ab72,
+            asign-hard: #008a3b
         );
         @return $map;
     }

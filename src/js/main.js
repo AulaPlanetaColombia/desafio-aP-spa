@@ -1,4 +1,3 @@
-var asignatura = 'cs';
 var animGen = 'fadeIn';
 var animSec = 'fadeIn';
 var numSeccion = 0;
@@ -8,7 +7,16 @@ var converter = new showdown.Converter();
 $(function(){
     $.getJSON('data/datos.json', function(data){
         dataPag = data;
-        cargaVista('portada');
+        $('#inicial').prepend('<div class="progress"></div>');
+        $('#inicial').append('<div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>');
+        $.preload(dataPag.assets).then(function() {
+            cargaVista('portada');
+        }, function() {
+            console.log("¡¡Error de precarga!!");
+        }, function(progress) {
+            $('#inicial .progress').css('width', Math.round(progress * 100) + '%');
+        });
+        //
     });
 });
 // Funciones Portada
@@ -18,7 +26,7 @@ function iniciaPortada() {
             ev.preventDefault();
             numVista = 'pag' + dosDigitos(i + 1);
             cargaVista(numVista);
-        })
+        }).children('.icono').html('<img src="./int/' + String(i + 1) + '-Boton-' + dataPag.asignatura + '.svg">');
     });
     $('#inicial').show().addClass('animated ' + animGen).on('animationend', function(){
         $('#inicial').off().removeClass('animated ' + animGen);

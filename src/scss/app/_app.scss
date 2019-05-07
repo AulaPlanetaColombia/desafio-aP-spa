@@ -1,46 +1,21 @@
+$asignatura: 'cs';
+
+// Algunos resets y construcciones base
 html {
     font-size: 10px;
     body {
         margin: 0;
         overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        h3 {
+            font-size: 2.2rem;
+        }
     }
 }
 /****** Variables *******/
-
-$asignatura: 'cs';
-
 // Media queries base
-@include media-queries(640px, 720px, 800px, 960px, 1024px, 1280px, 2560px);
-/**
-html {
-    font-size: 10px;
-}
-@media screen and (max-width: 1023px) {
-    html {
-        font-size: 6px;
-    }
-}
-@media screen and (max-height: 767px) {
-    html {
-        font-size: 6px;
-    }
-}
-@media screen and (min-width: 1024px) and (min-height: 768px) {
-    html {
-        font-size: 10px;
-    }
-}
-@media screen and (min-width: 1280px) and (min-height: 960px) {
-    html {
-        font-size: 12.5px;
-    }
-}
-@media screen and (min-width: 2560px) and (min-height: 1920px) {
-    html {
-        font-size: 25px;
-    }
-}
-//*/
+@include media-queries(640px, 720px, 800px, 960px, 1016px, 1024px, 1280px, 2560px);
 // Tipografía
 $sans-serif: 'Arial', 'Helvetica', 'Lato', sans-serif;
 $sans-serif-italic: 'Arial', 'Helvetica', 'LatoItalic', sans-serif;
@@ -52,8 +27,8 @@ $serif: 'Times New Roman', 'Times','PT_Serif', serif;
 $desafio-size: 5.4rem;
 $tema-size: 4.5rem;
 $titulo-size: 2.4rem;
-$footer-desafio-size: 2.25rem;
-$footer-tema-size: 1.75rem;
+$footer-desafio-size: 2.5rem;
+$footer-tema-size: 2rem;
 $pregunta-detona-size: 7.2rem;
 $parrafo-size: 2.2rem;
 
@@ -75,41 +50,41 @@ $circulo-prueba: 23.0rem;
 // Variables por asignatura
 $variables: variables($asignatura);
 
-// Texto titulo
-$desafio-color: map-get($variables, 'desafio-color');
-$tema-color: map-get($variables, 'tema-color');
-$titulo-borde: map-get($variables, 'titulo-borde');
 
 // Colores
 $asign-soft: map-get($variables, 'asign-soft');
 $asign-hard: map-get($variables, 'asign-hard');
-$blanco: map-get($variables, 'blanco');
-$titulo-nav: map-get($variables, 'titulo-nav');
-$ap-soft: map-get($variables, 'ap-soft');
-$footer-color: map-get($variables, 'footer-color');
-$texto-resaltado: map-get($variables, 'texto-resaltado');
-$pag01-hard: map-get($variables, 'pag01-hard');
-$pag01-soft: map-get($variables, 'pag01-soft');
-$pag02-hard: map-get($variables, 'pag02-hard');
-$pag02-soft: map-get($variables, 'pag02-soft');
-$pag03-hard: map-get($variables, 'pag03-hard');
-$pag03-soft: map-get($variables, 'pag03-soft');
-$pag04-hard: map-get($variables, 'pag04-hard');
-$pag04-soft: map-get($variables, 'pag04-soft');
-$pag04-espe: map-get($variables, 'pag04-espe');
-$pag04-light: map-get($variables, 'pag04-light');
-$pag05-soft: map-get($variables, 'pag05-soft');
-$pag05-hard: map-get($variables, 'pag05-hard');
-$pag06-soft: map-get($variables, 'pag06-soft');
-$pag06-hard: map-get($variables, 'pag06-hard');
-$pag07-soft: map-get($variables, 'pag07-soft');
-$pag07-hard: map-get($variables, 'pag07-hard');
-$pag07-tran: map-get($variables, 'pag07-tran');
-$pag08-soft: map-get($variables, 'pag08-soft');
-$pag08-hard: map-get($variables, 'pag08-hard');
+$blanco: #fff;
+$titulo-nav: #0b3158;
+$ap-soft: #00aae1;
+$footer-color: #0b3158;
+$texto-resaltado: #0b3158;
+$pag01-hard: #776db0;
+$pag01-soft: #d6d3e7;
+$pag02-hard: #e54d3d;
+$pag02-soft: #eb7064;
+$pag03-hard: #33bbe7;
+$pag03-soft: #33bbe7;
+$pag04-hard: #00b212;
+$pag04-soft: #4dc959;
+$pag04-espe: #bfd966;
+$pag04-light: #e4eed0;
+$pag05-hard: #f5cc1f;
+$pag05-soft: #f8db62;
+$pag06-hard: #ff9100;
+$pag06-soft: #ffb24d;
+$pag07-hard: #4a6eab;
+$pag07-soft: #8099c4;
+$pag08-hard: #db6600;
+$pag08-soft: #db6600;
+
+// Texto titulo
+$titulo-borde: map-get($variables, 'titulo-borde');
+$desafio-color: $titulo-nav;
+$tema-color: $asign-soft;
 
 // Backgrounds
-$bg-portada: map-get($variables, 'bg-portada');
+$fondo-portada: url('../int/portada_' + $asignatura + '.jpg');
 
 // Contenido
 #inicial {
@@ -117,10 +92,101 @@ $bg-portada: map-get($variables, 'bg-portada');
     width: $ancho-total;
     height: $alto-total;
     margin: 0 auto;
+    margin-top: calc((100vh - 76.8rem) / 2);
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
     //overflow-y: scroll !important;
+    .progress {
+        width: 0%;
+        height: 1px;
+        background-color: $asign-soft;
+    }
+    .lds-default {
+        display: block;
+        position: relative;
+        width: 64px;
+        height: 64px;
+        margin: 0 auto;
+        margin-top: calc((100vh - 64px) / 2);
+    }
+    .lds-default div {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: $asign-soft;
+        border-radius: 50%;
+        animation: lds-default 1.2s linear infinite;
+    }
+    .lds-default div:nth-child(1) {
+        animation-delay: 0s;
+        top: 29px;
+        left: 53px;
+    }
+    .lds-default div:nth-child(2) {
+        animation-delay: -0.1s;
+        top: 18px;
+        left: 50px;
+    }
+    .lds-default div:nth-child(3) {
+        animation-delay: -0.2s;
+        top: 9px;
+        left: 41px;
+    }
+    .lds-default div:nth-child(4) {
+        animation-delay: -0.3s;
+        top: 6px;
+        left: 29px;
+    }
+    .lds-default div:nth-child(5) {
+        animation-delay: -0.4s;
+        top: 9px;
+        left: 18px;
+    }
+    .lds-default div:nth-child(6) {
+        animation-delay: -0.5s;
+        top: 18px;
+        left: 9px;
+    }
+    .lds-default div:nth-child(7) {
+        animation-delay: -0.6s;
+        top: 29px;
+        left: 6px;
+    }
+    .lds-default div:nth-child(8) {
+        animation-delay: -0.7s;
+        top: 41px;
+        left: 9px;
+    }
+    .lds-default div:nth-child(9) {
+        animation-delay: -0.8s;
+        top: 50px;
+        left: 18px;
+    }
+    .lds-default div:nth-child(10) {
+        animation-delay: -0.9s;
+        top: 53px;
+        left: 29px;
+    }
+    .lds-default div:nth-child(11) {
+        animation-delay: -1s;
+        top: 50px;
+        left: 41px;
+    }
+    .lds-default div:nth-child(12) {
+        animation-delay: -1.1s;
+        top: 41px;
+        left: 50px;
+    }
+    @keyframes lds-default {
+        0%, 20%, 80%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.5);
+        }
+    }
+
 }
 .ap {
     span:nth-of-type(1) {
