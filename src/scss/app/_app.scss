@@ -17,13 +17,8 @@ html {
 // Media queries base
 @include media-queries(640px, 720px, 800px, 960px, 1016px, 1024px, 1280px, 2560px);
 // Tipografía
-$sans-serif: 'Arial', 'Helvetica', 'Lato', sans-serif;
-$sans-serif-italic: 'Arial', 'Helvetica', 'LatoItalic', sans-serif;
-$sans-serif-black: 'Arial', 'Helvetica', 'LatoBlack', sans-serif;
-$sans-serif-bold: 'Arial', 'Helvetica', 'LatoBold', sans-serif;
-$sans-serif-blackitalic: 'Arial', 'Helvetica', 'LatoBlackItalic', sans-serif;
-$sans-serif-bolditalic: 'Arial', 'Helvetica', 'LatoBoldItalic', sans-serif;
-$serif: 'Times New Roman', 'Times','PT_Serif', serif;
+$sans-serif: 'Arial', 'Helvetica', sans-serif;
+$serif: 'Times New Roman', 'Times', serif;
 $desafio-size: 5.4rem;
 $tema-size: 4.5rem;
 $titulo-size: 2.4rem;

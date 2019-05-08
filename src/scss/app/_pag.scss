@@ -16,7 +16,7 @@
                 top: 2.1rem;
             }
             .texto {
-                font-family: $sans-serif-black;
+                font-family: $sans-serif;
                 font-weight: bolder;
                 color: $titulo-nav;
                 position: absolute;
@@ -69,7 +69,7 @@
             right: 10.8rem;
             top: 0.4rem;
             #desafio {
-                font-family: $sans-serif-black;
+                font-family: $sans-serif;
                 font-size: $footer-desafio-size;
                 font-weight: bolder;
                 line-height: 1.2;
@@ -175,7 +175,7 @@
                     justify-content: center;
                     .texto {
                         color: $blanco;
-                        font-family: $sans-serif-black;
+                        font-family: $sans-serif;
                         font-size: $pregunta-detona-size;
                         font-weight: bolder;
                         text-align: center;
@@ -211,7 +211,7 @@
                 //font-size: 28px;
                 margin: 3.8rem;
                 color: $pag02-hard;
-                font-family: $sans-serif-black;
+                font-family: $sans-serif;
                 font-weight: bolder;
             }
             .imagen-apoyo {
@@ -250,7 +250,7 @@
                 //font-size: 28px;
                 width: 51.9rem;
                 color: $pag03-hard;
-                font-family: $sans-serif-black;
+                font-family: $sans-serif;
                 font-weight: bolder;
             }
             .hilo {
@@ -269,7 +269,7 @@
                             display: block;
                         }
                         span {
-                            font-family: $sans-serif-bold;
+                            font-family: $sans-serif;
                             font-weight: bold;
                             font-size: 1.4rem;
                             text-align: center;
@@ -330,16 +330,14 @@
                 margin-left: ($ancho-total - $ancho-contenido) / 2;
                 margin-top: $barra-height + 6;
                 h3.texto-resaltado {
-                    font-family: $sans-serif-black;
+                    font-family: $sans-serif;
                     color: $pag04-hard;
-                    //font-size: 3.6rem;
                     padding-top: 1.35em;
                     width: 22em;
                 }
                 p {
                     font-family: $sans-serif;
                     font-weight: normal;
-                    //font-size: 27px;
                     margin-top: 2.1rem;
                 }
                 ul {
@@ -371,7 +369,7 @@
                 margin-top: $barra-height + 6;
                 .texto-resaltado-inv {
                     position: absolute;
-                    font-family: $sans-serif-black;
+                    font-family: $sans-serif;
                     font-weight: bolder;
                     //font-size: 38px;
                     color: $blanco;
@@ -394,7 +392,7 @@
                             border-radius: 50%;
                             background-color: $pag04-espe;
                             color: $blanco;
-                            font-family: $sans-serif-black;
+                            font-family: $sans-serif;
                             span {
                                 position: absolute;
                                 left: 2.1rem;
@@ -470,7 +468,7 @@
                 margin-left: ($ancho-total - $ancho-contenido) / 2;
                 padding-bottom: 1em;
                 h3.texto-resaltado {
-                    font-family: $sans-serif-black;
+                    font-family: $sans-serif;
                     color: $pag05-hard;
                     //font-size: 26px;
                     padding-top: 1.75em;
@@ -513,7 +511,7 @@
                 margin-left: ($ancho-total - $ancho-contenido) / 2;
                 padding-bottom: 1em;
                 h3.texto-resaltado {
-                    font-family: $sans-serif-black;
+                    font-family: $sans-serif;
                     color: $pag06-hard;
                     //font-size: 26px;
                     padding-top: 1.75em;
@@ -568,7 +566,7 @@
                 margin-left: ($ancho-total - $ancho-contenido) / 2;
                 padding-bottom: 1em;
                 h3.texto-resaltado {
-                    font-family: $sans-serif-black;
+                    font-family: $sans-serif;
                     color: $pag07-hard;
                     //font-size: 26px;
                     padding-top: 1.75em;
@@ -611,7 +609,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        font-family: $sans-serif-black;
+                        font-family: $sans-serif;
                         font-weight: bolder;
                         font-size: 3.5rem;
                         padding: 1.6rem;
@@ -645,7 +643,7 @@
                 flex-direction: column;
                 align-items: center;
                 h3.texto-resaltado {
-                    font-family: $sans-serif-black;
+                    font-family: $sans-serif;
                     color: $pag08-hard;
                     //font-size: 30px;
                     &:first-of-type {
