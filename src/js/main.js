@@ -118,6 +118,11 @@ function cargaVista(vista) {
 function cargaTitulos() {
     $('#titulo>#desafio').html(dataPag.desafio);
     $('#titulo>#tema').html(dataPag.tema);
+    $('a').each(function(elem) {
+        if ($(this).attr('href') !== '#') {
+            $(this).attr('target', '_blank');
+        }
+    });
 }
 function dosDigitos(num) {
     return num < 10 ? '0' + num : String(num);

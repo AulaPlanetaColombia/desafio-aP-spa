@@ -29,19 +29,19 @@
     $minalto: ($minancho / 4) * 3;
     @media screen and (max-width: #{$minancho}) {
         html {
-            font-size: 6px;
+            font-size: 60px;
         }
     }
     @media screen and (max-height: #{$minalto}) {
         html {
-            font-size: 6px;
+            font-size: 60px;
         }
     }
     @each $var in $anchos {
         $k: $var / 1024;
         $alto: ($k * 768);
         $ancho: $var;
-        $font: $k * 10;
+        $font: $k * $tolerancia;//100;
         @media screen and (min-width: #{$ancho}) and (min-height: #{$alto}) {
             html {
                 font-size: #{$font};

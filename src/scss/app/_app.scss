@@ -1,50 +1,61 @@
 $asignatura: 'cs';
-
 // Algunos resets y construcciones base
 html {
-    font-size: 10px;
+    font-size: 99px;
     body {
         margin: 0;
         overflow: hidden;
         width: 100vw;
         height: 100vh;
         h3 {
-            font-size: 2.2rem;
+            font-size: .22rem;
         }
     }
 }
-/****** Variables *******/
+$tolerancia: 97.5; // Es el porcentaje total de la pantalla que ocupa el interactivo.
 // Media queries base
-@include media-queries(640px, 720px, 800px, 960px, 1016px, 1024px, 1280px, 2560px);
+@include media-queries(240px, 320px, 375px, 425px, 480px, 512px, 640px, 720px, 800px, 960px, 1016px, 1024px, 1280px, 1700px, 1920px, 2560px);
+html {
+    @media (max-device-aspect-ratio: 4/3) {
+        font-size: calc((100vw / 1024) * $tolerancia);
+    }
+    @media (min-device-aspect-ratio: 4/3) {
+        font-size: calc((100vh / 768) * $tolerancia);
+    }
+}
+/****** Variables *******/
+
 // Tipografía
 $sans-serif: 'Arial', 'Helvetica', sans-serif;
 $serif: 'Times New Roman', 'Times', serif;
-$desafio-size: 5.4rem;
-$tema-size: 4.5rem;
-$titulo-size: 2.4rem;
-$footer-desafio-size: 2.5rem;
-$footer-tema-size: 2rem;
-$pregunta-detona-size: 7.2rem;
-$parrafo-size: 2.2rem;
+$desafio-size: .54rem;
+$tema-size: .45rem;
+$titulo-size: .24rem;
+$footer-desafio-size: .25rem;
+$footer-tema-size: .2rem;
+$pregunta-detona-size: .72rem;
+$parrafo-size: .22rem;
 
 // Páginas de contenido
-$ancho-total: 102.4rem;
-$alto-total: 76.8rem;
-$barra-height: 6.1rem;
-$footer-height: 7.3rem;
-$ancho-contenido: 82.3rem;
+$ancho-total: 10.2rem;
+$alto-total: 7.64rem;
+$barra-height: .61rem;
+$footer-height: .73rem;
+$ancho-contenido: 8.23rem;
+$preg-detona-size: 8.3rem;
+$biberon-width: 3.91rem;
+$biberon-height: 7.08rem;
 
 // Imágenes y logos
-$logo-barra: 2.6rem;
-$icono-barra: 6.6rem;
-$navbar-boton: 2.3rem;
-$navbar-boton-width: 3.3rem;
-$navbar-boton-height: 4.3rem;
-$circulo-prueba: 23.0rem;
+$logo-barra: .26rem;
+$icono-barra: .66rem;
+$navbar-boton: .23rem;
+$navbar-boton-width: .33rem;
+$navbar-boton-height: .43rem;
+$circulo-prueba: 2.3rem;
 
 // Variables por asignatura
 $variables: variables($asignatura);
-
 
 // Colores
 $asign-soft: map-get($variables, 'asign-soft');
@@ -87,11 +98,14 @@ $fondo-portada: url('../int/portada_' + $asignatura + '.jpg');
     width: $ancho-total;
     height: $alto-total;
     margin: 0 auto;
-    margin-top: calc((100vh - 76.8rem) / 2);
+    margin-top: calc((100vh - 7.64rem) / 2);
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
     //overflow-y: scroll !important;
+    @media (max-device-aspect-ratio: 5/6) {
+        margin-top: 0;
+    }
     .progress {
         width: 0%;
         height: 1px;
