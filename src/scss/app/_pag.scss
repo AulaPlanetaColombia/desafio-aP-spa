@@ -150,6 +150,9 @@
         .seccion {
             height: $alto-total - $barra-height - $footer-height;
             .contenedor {
+                width: $ancho-contenido;
+                margin: 0 auto;
+                padding-top: .41rem;
                 .texto {
                     font-size: 0.2rem;
                     background-color: rgba($pag01-hard, .15);
@@ -161,16 +164,33 @@
                         font-size: 0.18rem;
                     }
                 }
+                .imagen {
+                    a {
+                        text-decoration: none;
+                        position: relative;
+                        &:before {
+                            content: '';
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            width: 100%;
+                            height: 0.75rem;
+                            width: 0.75rem;
+                            position: absolute;
+                            bottom: 0.5rem;
+                            right: 0.13rem;
+                            background-image: url(../int/link01.svg);
+                            background-size: 70%;
+                            background-color: rgba(255,255,255,0.75);
+                            background-position: 33% 50%;
+                            border-radius: 50%;
+                        }
+                    }
+                    img {
+                        max-width: 100%;
+                        border: solid 2px $pag01-hard;
+                    }
+                }
             }
-        }
-        .sec01 {
-            .contenedor {
-                width: $ancho-contenido;
-                margin: 0 auto;
-                padding-top: .41rem;
-            }
-        }
-        .sec02 {
             .preg-detona {
                 width: $preg-detona-size;
                 height: $alto-total - $barra-height - $footer-height;
@@ -621,13 +641,36 @@
                             max-width: 100%;
                             display: table;
                             text-align: center;
+                            a {
+                                text-decoration: none;
+                                position: relative;
+                                &:before {
+                                    content: '';
+                                    background-size: 70%;
+                                    background-repeat: no-repeat;
+                                    background-color: rgba(255,255,255,0.75);
+                                    background-position: 33% 50%;
+                                    border-radius: 50%;
+                                    height: 0.5rem;
+                                    width: 0.5rem;
+                                    position: absolute;
+                                    bottom: -0.6rem;
+                                    right: 0.15rem;
+                                    background-image: url(../int/link07.svg);
+                                }
+                                .img {
+                                    border: 1px solid $pag07-hard;
+                                }
+                            }
                             .img {
-                                max-width: 19%;
+                                max-width: 18.5%;
                                 display: inline-table;
                                 vertical-align: middle;
-                                padding-left: .04rem;
+                                margin-left: .04rem;
+                            }
+                            > .img {
                                 &:last-of-type {
-                                    padding-right: .04rem;
+                                    margin-right: .04rem;
                                 }
                             }
                             &:first-of-type {

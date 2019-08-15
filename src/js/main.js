@@ -20,6 +20,7 @@ $(function(){
 });
 // Funciones Portada
 function iniciaPortada() {
+    ajustaRecursoCE();
     $('#botonera a').each(function(i,e){
         $(e).off().click(function(ev){
             ev.preventDefault();
@@ -98,6 +99,12 @@ function ocultaSecciones() {
     }
 }
 // Funciones Generales
+function ajustaRecursoCE() {
+    if ($('html').width() < 820 && $('html').width() > 810 && $('html').height() < 680 && $('html').height() > 675) {
+        $('html').css('font-size','78px');
+        console.log('Ajustado recurso a CE.');
+    }
+}
 function cargaVista(vista) {
     $.get('views/' + vista + '.html', function(html){
         $.each($('#inicial').attr('class').split(/\s+/), function(i, e) {

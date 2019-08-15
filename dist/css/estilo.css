@@ -26,3 +26,6 @@
     font-size: .35rem;
     padding: .16rem;
 }
+.view-pag07 .contenido .seccion .contenedor figure.mosaico .imagenes:last-of-type .img {
+    max-width: 48%;
+}
