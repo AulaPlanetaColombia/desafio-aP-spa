@@ -167,6 +167,7 @@
                 .imagen {
                     a {
                         text-decoration: none;
+                        /*
                         position: relative;
                         &:before {
                             content: '';
@@ -184,6 +185,7 @@
                             background-position: 33% 50%;
                             border-radius: 50%;
                         }
+                        */
                     }
                     img {
                         max-width: 100%;
@@ -643,6 +645,7 @@
                             text-align: center;
                             a {
                                 text-decoration: none;
+                                /*
                                 position: relative;
                                 &:before {
                                     content: '';
@@ -658,7 +661,8 @@
                                     right: 0.15rem;
                                     background-image: url(../int/link07.svg);
                                 }
-                                .img {
+                                */
+                                .img { // Este borde lo habíamos acordado antes de decidir sobre el ícono de link. 
                                     border: 1px solid $pag07-hard;
                                 }
                             }
