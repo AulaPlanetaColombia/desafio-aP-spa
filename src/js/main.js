@@ -2,7 +2,7 @@ var animGen = 'fadeIn';
 var animSec = 'fadeIn';
 var numSeccion = 0;
 var dataPag = {};
-var numSecTotal, secVisible, numSec, nomSec, numPag, disabled, classPag, numSec, numVista;
+var numSecTotal, secVisible, numSec, nomSec, numPag, disabled, classPag, numSec, numVista, videoCont;
 $(function(){
     $.getJSON('data/datos.json', function(data){
         dataPag = data;
@@ -65,6 +65,10 @@ function cargaSeccion(num) {
 function ocultaSecciones() {
     numSecTotal = $('#inicial .contenido .seccion').length - 1;
     secVisible = dosDigitos(numSeccion + 1);
+    if (numVista == "pag01" && numSeccion == 1) {
+        videoCont = $('.seccion.sec01 .contenedor .video-youtube').html();
+        $('.seccion.sec01 .contenedor .video-youtube').html(videoCont);
+    }
     $('#inicial .contenido .seccion').each(function(i,e){
         $.each($(e).attr('class').split(/\s+/), function(index, elemento) {
             if (elemento.substr(0,3) == 'sec' && elemento.length == 5) {
