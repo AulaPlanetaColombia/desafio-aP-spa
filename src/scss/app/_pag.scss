@@ -170,21 +170,21 @@
                         /*
                         position: relative;
                         &:before {
-                            content: '';
-                            background-size: contain;
-                            background-repeat: no-repeat;
-                            width: 100%;
-                            height: 0.75rem;
-                            width: 0.75rem;
-                            position: absolute;
-                            bottom: 0.5rem;
-                            right: 0.13rem;
-                            background-image: url(../int/link01.svg);
-                            background-size: 70%;
-                            background-color: rgba(255,255,255,0.75);
-                            background-position: 33% 50%;
-                            border-radius: 50%;
-                        }
+                        content: '';
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        height: 0.75rem;
+                        width: 0.75rem;
+                        position: absolute;
+                        bottom: 0.5rem;
+                        right: 0.13rem;
+                        background-image: url(../int/link01.svg);
+                        background-size: 70%;
+                        background-color: rgba(255,255,255,0.75);
+                        background-position: 33% 50%;
+                        border-radius: 50%;
+                    }
                         */
                     }
                     img {
@@ -353,6 +353,13 @@
                         &:first-of-type {
                             padding-top: 0.55em;
                         }
+                    }
+                }
+            }
+            &.sec01 {
+                .contenedor {
+                    .texto {
+                        max-width: 30em;
                     }
                 }
             }
@@ -648,19 +655,19 @@
                                 /*
                                 position: relative;
                                 &:before {
-                                    content: '';
-                                    background-size: 70%;
-                                    background-repeat: no-repeat;
-                                    background-color: rgba(255,255,255,0.75);
-                                    background-position: 33% 50%;
-                                    border-radius: 50%;
-                                    height: 0.5rem;
-                                    width: 0.5rem;
-                                    position: absolute;
-                                    bottom: -0.6rem;
-                                    right: 0.15rem;
-                                    background-image: url(../int/link07.svg);
-                                }
+                                content: '';
+                                background-size: 70%;
+                                background-repeat: no-repeat;
+                                background-color: rgba(255,255,255,0.75);
+                                background-position: 33% 50%;
+                                border-radius: 50%;
+                                height: 0.5rem;
+                                width: 0.5rem;
+                                position: absolute;
+                                bottom: -0.6rem;
+                                right: 0.15rem;
+                                background-image: url(../int/link07.svg);
+                            }
                                 */
                                 .img { // Este borde lo habíamos acordado antes de decidir sobre el ícono de link. 
                                     border: 1px solid $pag07-hard;
