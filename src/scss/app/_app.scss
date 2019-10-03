@@ -17,7 +17,7 @@ $tolerancia: 99; // Es el porcentaje total de la pantalla que ocupa el interacti
 @include media-queries(240px, 320px, 375px, 425px, 480px, 512px, 640px, 720px, 800px, 960px, 1016px, 1024px, 1280px, 1700px, 1920px, 2560px);
 html {
     @media (max-device-aspect-ratio: 4/3) {
-        font-size: calc((100vw / 1024) * 99);
+        font-size: calc((100vw / 1024) * 98);
     }
     @media (min-device-aspect-ratio: 4/3) {
         font-size: calc((100vh / 768) * 99);

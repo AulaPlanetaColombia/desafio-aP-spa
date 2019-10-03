@@ -106,7 +106,23 @@ function ocultaSecciones() {
 function ajustaRecursoCE() {
     if ($('html').width() < 820 && $('html').width() > 810 && $('html').height() < 680 && $('html').height() > 675) {
         $('html').css('font-size','78px');
-        console.log('Ajustado recurso a CE.');
+    } else {
+        ajustaVentana();
+        $(window).resize(ajustaVentana());
+    }
+}
+function ajustaVentana() {
+    var k = .98;
+    var anchoIdeal =  $('html').width() / 10.2 * k;
+    var altoIdeal =  $('html').height() / 7.64 * k;
+    if ($('#inicial').width() > $('html').width() || $('#inicial').height() > $('html').height()) {
+        if ($(window).width() < $(window).height()) {
+            $('html').css('font-size',String(anchoIdeal)+'px');
+        } else {
+            $('html').css('font-size',String(altoIdeal)+'px');
+        }
+    } else {
+        $('html').css('font-size','');
     }
 }
 function cargaVista(vista) {
