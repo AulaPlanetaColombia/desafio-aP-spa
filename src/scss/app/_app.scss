@@ -16,10 +16,10 @@ $tolerancia: 99; // Es el porcentaje total de la pantalla que ocupa el interacti
 // Media queries base
 @include media-queries(240px, 320px, 375px, 425px, 480px, 512px, 640px, 720px, 800px, 960px, 1016px, 1024px, 1280px, 1700px, 1920px, 2560px);
 html {
-    @media (max-device-aspect-ratio: 4/3) {
+    @media (max-aspect-ratio: 4/3) {
         font-size: calc((100vw / 1024) * 98);
     }
-    @media (min-device-aspect-ratio: 4/3) {
+    @media (min-aspect-ratio: 4/3) {
         font-size: calc((100vh / 768) * 99);
     }
 }
@@ -103,7 +103,7 @@ $fondo-portada: url('../int/portada_' + $asignatura + '.jpg');
     position: relative;
     overflow: hidden;
     //overflow-y: scroll !important;
-    @media (max-device-aspect-ratio: 5/6) {
+    @media (max-aspect-ratio: 5/6) {
         margin-top: 0;
     }
     .progress {
